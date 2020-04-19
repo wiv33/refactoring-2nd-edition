@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 *.iml
 .idea
-*private
+*private*
 node_modules
