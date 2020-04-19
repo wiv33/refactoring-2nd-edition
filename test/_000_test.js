@@ -1,6 +1,6 @@
 const Province = require("./app.test");
 const assert = require("assert")
-const chai = require("chai")
+const expect = require("chai").expect
 
 describe('tests', () => {
     it('shortfall', () => {
@@ -12,6 +12,6 @@ describe('tests', () => {
 describe('province', () => {
     it('shortfall', () => {
         const asia = new Province({name:"hello"})
-        chai.expect(asia.name).equal("hello")
+        expect(asia.name).equal("hello")
     })
 })
