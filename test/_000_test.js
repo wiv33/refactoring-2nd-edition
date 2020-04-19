@@ -2,16 +2,14 @@ const Province = require("./app.test");
 const assert = require("assert")
 const expect = require("chai").expect
 
-describe('tests', () => {
+describe('province', () => {
+    let asia
+    beforeEach(() => asia = new Province({name:"hello"}))
+
     it('shortfall', () => {
-        const asia = new Province({name:"hello"})
         assert.equal(asia._name, "hello");
     })
-})
-
-describe('province', () => {
     it('shortfall', () => {
-        const asia = new Province({name:"hello"})
         expect(asia.name).equal("hello")
     })
 })
