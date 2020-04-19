@@ -13,3 +13,17 @@ describe('province', () => {
         expect(asia.name).equal("hello")
     })
 })
+
+describe('문법 테스트', () => {
+    function printOwing(invoice) {
+        let outstanding = 30;
+        printDetails(outstanding);
+
+        function printDetails(outstanding) {
+            console.log(`고객명: ${invoice.customer}`);
+            console.log(`채무액: ${outstanding}`);
+        }
+    }
+    printOwing({customer: "my body"})
+
+})
