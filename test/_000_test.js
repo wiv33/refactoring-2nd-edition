@@ -24,6 +24,22 @@ describe('문법 테스트', () => {
             console.log(`채무액: ${outstanding}`);
         }
     }
-    printOwing({customer: "my body"})
+    it("함수 추출하기", () => {
+        printOwing({customer: "my body"})
+    })
 
 })
+
+describe('assertion 테스트', () => {
+    function testAssertion(customer, isPriority) {
+        assert(isPriority === true || isPriority === false);
+    }
+    it('매개변수 사용하지 않아 실패', () => {
+        testAssertion({my: "body"})
+    })
+
+    it('매개변수 사용으로 성공', () => {
+        testAssertion({my: "body"}, false)
+    })
+})
+
