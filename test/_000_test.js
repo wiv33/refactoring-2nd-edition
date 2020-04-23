@@ -31,14 +31,17 @@ describe('문법 테스트', () => {
 })
 
 describe('assertion 테스트', () => {
-    function testAssertion(customer, isPriority) {
-        assert(isPriority === true || isPriority === false);
-    }
-    it('매개변수 사용하지 않아 실패', () => {
+    it('매개변수 전달하지 않아 실패', () => {
+        function testAssertion(customer, isPriority) {
+            assert.strictEqual(isPriority, undefined, "not used");
+        }
         testAssertion({my: "body"})
     })
 
-    it('매개변수 사용으로 성공', () => {
+    it('매개변수 전달 테스트 성공', () => {
+        function testAssertion(customer, isPriority) {
+            assert(isPriority === true || isPriority === false);
+        }
         testAssertion({my: "body"}, false)
     })
 })
