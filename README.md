@@ -233,3 +233,7 @@ Chapter 06 (기본적인 리팩터링)
         3. 기존 메서드 선언을 참조하는 부분을 모두 찾아서 바뀐 형태로 수정한다.
             + Ctrl + Shift + M by IDEA (extract method)
         4. 테스트한다.
+
+## 6.6 변수 캡슐화 하기
+
+**Like to**
