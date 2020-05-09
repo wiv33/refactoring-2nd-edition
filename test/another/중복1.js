@@ -140,3 +140,29 @@ function appendArticleListObject(isMore, slim, category) {
     }).always(function () {
     });
 }
+
+
+
+var photoArticleTemplate = function(isOrder) {
+    var cmss_url = isOrder ? "cms_url" : "cmss_url";
+    return '<div class="admin-mid-article3 drag" title="{{list_title}}" data-id="{{{unique_id}}}" article_order="{{{article_order}}}">' +
+        '<a href="javascript:void(0)" class="media" ' +
+
+        ' ondragstart="dragArticleRelational(event, this);"' +
+
+        ' data-id="{{{unique_id}}}" data-title="{{list_title}}" data-summary="{{summary}}"' +
+
+        '>' +
+
+        '{{#cms_thumbnail_img}}<span class="admin-img-mask-wrap"><img class="admin-mid-article-img ml-0"  src="{{{cms_thumbnail_img}}}" class="ml-0" alt="{{list_title}}" /></span>{{/cms_thumbnail_img}}' +
+        '<div class="admin-media-body {{#cms_thumbnail_img}}relative{{/cms_thumbnail_img}}{{^cms_thumbnail_img}}ml-0{{/cms_thumbnail_img}}">' +
+        '<h1 class="admin-mid-article-title2 {{^cms_thumbnail_img}}long{{/cms_thumbnail_img}} serif">' +
+        '{{#audio}}<span class="admin-type-voice">{{{list_title}}}</span>{{/audio}}{{^audio}}<span>{{{list_title}}}</span>{{/audio}}' +
+        '</h1>' +
+        '<p class="admin-mid-article-content2 {{^cms_thumbnail_img}}long{{/cms_thumbnail_img}}">{{{summary}}}</p>' +
+        '<p class="admin-article-date">{{custom_date}}{{#custom_reporter}}, {{custom_reporter}}{{/custom_reporter}}</p>' +
+        '<input type="hidden" id="hidCmssUrl" value="{{{' + cmss_url + '}}}"><input type="hidden" id="hidUseYn" value="{{{use_yn}}}"></div>' +
+        '<a href="#" class="btn btn-sm mr-5 plDetail" onclick="fncOpenArticleDetailPop(\'{{{' + cmss_url + '}}}\')">상세보기</a>' +
+        '</a>' +
+        '</div>';
+};

@@ -146,3 +146,40 @@ function appendArticleListObject(isMore, slim) {
     var initViewport = null;
 }
 
+
+
+var photoArticleTemplate =
+    '<div class="admin-mid-article2 drag droppable" title="{{list_title}}" data-id="{{{unique_id}}}" >' +
+    '<a href="javascript:void(0)" class="media" ' +
+    // ' onclick="windowPopFunc(\'{{{cmss_url}}}\')"' +
+    // ' onclick="imgEditor(event,\'{{{unwrap_img_url}}}\')"' +
+
+    ' onclick="clickArticleRelational(event, this);"' +
+    ' ondragstart="dragArticleRelational(event, this);"' +
+    ' ondragend="flagContenteditable(true)"' +
+
+    ' data-id="{{{unique_id}}}" data-title="{{list_title}}" data-summary="{{summary}}"' +
+    // ' data-thumb_img="{{hp_thumbnail_img}}"' +
+    //     /* 아래 값들이 여러 개가 되어야 한다면, 기사 번호로 DB 조회나 for문에서 인덱스를 활용해서 HTML을 직접 생성해야한다. */
+    // ' {{#unwrap_audio_url}} data-audio_url="{{{unwrap_audio_url}}}" {{/unwrap_audio_url}}' +
+    // ' {{#unwrap_audio_desc}} data-audio_desc="{{{unwrap_audio_desc}}}" {{/unwrap_audio_desc}}' +
+    // ' {{#unwrap_video_url}} data-video_url="{{{unwrap_video_url}}}" {{/unwrap_video_url}}' +
+    // ' {{#unwrap_video_desc}} data-video_desc="{{{unwrap_video_desc}}}" {{/unwrap_video_desc}}' +
+    // ' {{#unwrap_img_desc}} data-img_desc="{{{unwrap_img_desc}}}" {{/unwrap_img_desc}}' +
+    // ' {{#unwrap_img_url}} data-img_url="{{{unwrap_img_url}}}" {{/unwrap_img_url}}' +
+    //
+    ' data-is_audio="{{{audio}}}"' +
+    //
+    // ' {{#unwrap_category}} data-category_code="{{code}}" data-category_name="{{{name}}}" {{/unwrap_category}}' +
+    '>' +
+
+    '{{#hp_thumbnail_img}}<span class="admin-img-mask-wrap{{#is_video}} mask-video{{/is_video}}"><img class="admin-mid-article-img ml-0"  src="{{hp_thumbnail_img}}" class="ml-0" alt="{{{list_title}}}" /></span>{{/hp_thumbnail_img}}' +
+    '<div class="admin-media-body {{#hp_thumbnail_img}}relative{{/hp_thumbnail_img}}{{^hp_thumbnail_img}}ml-0{{/hp_thumbnail_img}}">' +
+    '<h1 class="admin-mid-article-title2 {{^hp_thumbnail_img}}long{{/hp_thumbnail_img}} serif">' +
+    '<span class="{{#audio}}admin-type-voice{{/audio}}">{{{list_title}}}</span>' +
+    '</h1>' +
+    '<p class="admin-mid-article-content2 {{^hp_thumbnail_img}}long{{/hp_thumbnail_img}}">{{{summary}}}</p>' +
+    '<p class="admin-article-date">{{unwrap_date}}{{#unwrap_reporter}}, {{unwrap_reporter}}{{/unwrap_reporter}}</p>' +
+    '</div>' +
+    '</a>' +
+    '</div>';
