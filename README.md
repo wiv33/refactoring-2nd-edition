@@ -421,7 +421,7 @@ Chapter 10 (조건부 로직 간소화)
 
 
 
-Chapter 10 (API 리팩터링)
+Chapter 11 (API 리팩터링)
 ===
 
 
