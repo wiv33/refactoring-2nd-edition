@@ -13,12 +13,22 @@ function initArticleManagement() {
     $('.admin-article-wrap').empty();
 }
 
+function ps_initVariable(emptyTarget) {
+    pageId = 0;
+    globalTotalHeight = 0;
+
+    searchFlag = false;
+    isMore = false;
+    $(emptyTarget).empty();
+}
+
 function appendArticleListObject(isMore, slim) {
     // console.log(isMore);
     // validate
-    if (!isMore) {
-        initArticleManagement();
-    }
+    if (!isMore) initArticleManagement();
+
+    if (!isMore) ps_initVariable('.admin-article-wrap');
+
     searchFlag = true;
 
     var param = {

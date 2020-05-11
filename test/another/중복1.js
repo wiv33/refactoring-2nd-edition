@@ -2,8 +2,90 @@
 var pageId = 0;
 var totalHeight = 0;
 var searchFlag, isMore;
+/* 첫 번째 방식 */
+class ArticleListManager {
+    constructor(param) {
+        this._startCount = param.pageId || 0;
+        this._totalHeight = param.totalHeight || 0;
+        this._targetWrapper = param.targetWrapper;
+        this._searchFlag = false;
+        this._isMore = false;
+    }
 
+    initVariable() {
+        this._startCount = 0;
+        this._totalHeight = 0;
+        this._searchFlag = false;
+        this._isMore = false;
+        $(this._targetWrapper).empty();
+    }
 
+    ajaxAfterFunc(param) {
+        $.ajax({
+            url: param.url,
+            data: param.data
+        }).then(function (result) {
+            $("#loader-overlay").hide();
+            param.after.apply(result)
+
+            searchFlag = false;
+        }).fail(function (err) {
+            console.log(err);
+        }).always(function () {
+
+        });
+    }
+}
+/* === */
+/* 두 번째 방식 */
+var ArticleManager = {
+    searchList: {
+        pageId: {
+            value:0,
+            INIT: 0
+        },
+        totalHeight: {
+            value: 0,
+            INIT: 0
+        },
+        searchFlag: {
+            value: false,
+            INIT: false
+        },
+        isMore: {
+            value: false,
+            INIT: false
+        }
+    },
+    orderList: {
+        pageId: {
+            value:0,
+            INIT: 0
+        },
+        totalHeight: {
+            value: 0,
+            INIT: 0
+        },
+        searchFlag: {
+            value: false,
+            INIT: false
+        },
+        isMore: {
+            value: false,
+            INIT: false
+        },
+        isNotUpdateSearchKeywords: {
+            value: true,
+            INIT: true,
+        }
+    },
+
+    initVariable(data, targetWrapper) {
+        data.getOwnPropertyNames(v => v.value = v.INIT)
+        $(targetWrapper).empty();
+    }
+}
+/* ==== */
 function initArticleManagement() {
     pageId = 0;
     totalHeight = 0;
