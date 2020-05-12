@@ -95,6 +95,78 @@ function initArticleManagement() {
     $('#plmArticleWrap').empty();
 }
 
+function moveScroll({slim: slim, wrapper: wrapper, totalHeight: totalHeight}) {
+    var lastHeight = $(wrapper + ":last-child").height();
+    totalHeight += lastHeight ? lastHeight : 0;
+
+    if (slim)
+        $(slim.target).slimScroll({scrollTo: totalHeight - lastHeight});
+}
+/* inner function 시작*/
+function listHtml(result) {
+
+    function makeDate(date) {
+        return [
+            date.substring(0, 4),
+            date.substring(4, 6),
+            date.substring(6, 8)
+        ].join("-") + " " + date.substring(8, 10) + ":" + date.substring(10, 12);
+    }
+
+    function addCustom(resultList) {
+
+        if (resultList.multi_items.length > 0) {
+
+            for (var i = 0; i < resultList.multi_items.length; i++) {
+
+                if (resultList.multi_items[i].type === "MO") {
+                    resultList.audio = "True";
+                }
+
+                if (!resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_url"] &&
+                    resultList.multi_items[i].url) {
+                    resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_url"] = resultList.multi_items[i].url;
+                }
+                if (!resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_desc"] &&
+                    resultList.multi_items[i].desc) {
+                    resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_desc"] = resultList.multi_items[i].desc;
+                }
+
+                if (resultList.multi_items[i].thumbnail === "Y") {
+                    resultList.custom_img_url = resultList.multi_items[i].url;
+                    resultList.custom_img_desc = resultList.multi_items[i].desc;
+                }
+            }
+        }
+    }
+
+    function makeCustom(resultList) {
+        var result = "";
+        var template = photoArticleTemplate();
+        for (var y = 0; y < resultList.length; y++) {
+            var tempList = resultList[y];
+            tempList.custom_category = tempList.categories;
+            tempList.custom_date = makeDate(tempList.service_date);
+            tempList.custom_reporter = tempList.reporters[0] ? tempList.reporters[0].name : "";
+
+            addCustom(tempList);
+            result += Mustache.to_html(template, tempList);
+        }
+        return result;
+    }
+
+    function makeHtml(result, wrapper) {
+        var toHtml = "";
+        toHtml += "<div class='"+wrapper+"'>";
+        toHtml += makeCustom(result.RESULT_LIST);
+        toHtml += "</div>";
+        return toHtml;
+    }
+
+    return makeHtml(result);
+}
+/* inner function 끝 */
+
 function appendArticleListObject(isMore, slim, category) {
     console.log(category);
     if (!isMore) {
@@ -116,82 +188,8 @@ function appendArticleListObject(isMore, slim, category) {
 
     $("#loader-overlay").show();
 
-    /* inner function 시작*/
-    function listHtml(result) {
-
-        function makeDate(date) {
-            return [
-                date.substring(0, 4),
-                date.substring(4, 6),
-                date.substring(6, 8)
-            ].join("-") + " " + date.substring(8, 10) + ":" + date.substring(10, 12);
-        }
-
-        function addCustom(resultList) {
-
-            if (resultList.multi_items.length > 0) {
-
-                for (var i = 0; i < resultList.multi_items.length; i++) {
-
-                    if (resultList.multi_items[i].type === "MO") {
-                        resultList.audio = "True";
-                    }
-
-                    if (!resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_url"] &&
-                        resultList.multi_items[i].url) {
-                        resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_url"] = resultList.multi_items[i].url;
-                    }
-                    if (!resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_desc"] &&
-                        resultList.multi_items[i].desc) {
-                        resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_desc"] = resultList.multi_items[i].desc;
-                    }
-
-                    if (resultList.multi_items[i].thumbnail === "Y") {
-                        resultList.custom_img_url = resultList.multi_items[i].url;
-                        resultList.custom_img_desc = resultList.multi_items[i].desc;
-                    }
-                }
-            }
-        }
-
-        function makeCustom(resultList) {
-            var result = "";
-            var template = photoArticleTemplate();
-            for (var y = 0; y < resultList.length; y++) {
-                var tempList = resultList[y];
-                tempList.custom_category = tempList.categories;
-                tempList.custom_date = makeDate(tempList.service_date);
-                tempList.custom_reporter = tempList.reporters[0] ? tempList.reporters[0].name : "";
-
-                addCustom(tempList);
-                result += Mustache.to_html(template, tempList);
-            }
-            return result;
-        }
-
-        function makeHtml(result) {
-            var toHtml = "";
-            toHtml += "<div class='image-scroll-wrapper'>";
-            toHtml += makeCustom(result.RESULT_LIST);
-            toHtml += "</div>";
-            return toHtml;
-        }
-
-        return makeHtml(result);
-    }
-
-    function moveScroll(slim) {
-        var lastHeight = $(".image-scroll-wrapper:last-child").height();
-        totalHeight += lastHeight ? lastHeight : 0;
-
-        if (slim)
-            $(slim.target).slimScroll({scrollTo: totalHeight - lastHeight});
-    }
-
-    /* inner function 끝 */
-
     $.ajax({
-        url: "/article/management.do",
+        url: url,
         data: param
     }).then(function (result) {
         console.log(result);
@@ -214,12 +212,18 @@ function appendArticleListObject(isMore, slim, category) {
             cursor: "move"
         });
 
-        moveScroll(slim);
+        var scrollParam = {
+            slim: slim,
+            wrapper: ".image-scroll-wrapper",
+            totalHeight: totalHeight
+        }
+        moveScroll(scrollParam);
 
         searchFlag = false;
     }).fail(function (err) {
         console.log(err);
     }).always(function () {
+
     });
 }
 
