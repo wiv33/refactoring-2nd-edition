@@ -13,7 +13,7 @@ describe("## unescape test #", () => {
         actual = target.replace(/&apos;/gi, "'");
     })
     it("not equal target and expect", () => {
-        assert.notStrictEqual(actual === target, "my body");
+        assert.notStrictEqual(actual, target, "my body");
     })
     it("single quote", () => {
         assert.ok(expect === actual, "parse OK")
