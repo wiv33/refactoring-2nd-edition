@@ -18,4 +18,15 @@ describe("## unescape test #", () => {
     it("single quote", () => {
         assert.strictEqual(actual, expect, "is equal")
     })
+
+    describe('Test Async suite', function () {
+        this.timeout(2000);
+
+        it('should be fail', function (done) {
+            setTimeout(() => {
+                assert.strictEqual(0, 0);
+                done();
+            }, 3000);
+        });
+    })
 })
