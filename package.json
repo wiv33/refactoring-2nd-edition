@@ -5,7 +5,8 @@
     "chai": "^4.2.0",
     "mocha": "^7.1.1",
     "svelte": "^3.22.2",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "axios": "^0.19.2"
   },
   "scripts": {
     "start": "babel-node ./test/_000_test.js"

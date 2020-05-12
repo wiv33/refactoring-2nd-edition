@@ -20,21 +20,7 @@ class ArticleListManager {
         $(this._targetWrapper).empty();
     }
 
-    ajaxAfterFunc(param) {
-        $.ajax({
-            url: param.url,
-            data: param.data
-        }).then(function (result) {
-            $("#loader-overlay").hide();
-            param.after.apply(result)
 
-            searchFlag = false;
-        }).fail(function (err) {
-            console.log(err);
-        }).always(function () {
-
-        });
-    }
 }
 /* === */
 /* 두 번째 방식 */
