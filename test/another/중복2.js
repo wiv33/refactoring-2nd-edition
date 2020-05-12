@@ -52,18 +52,18 @@ function appendArticleOrderListObject(isMore, slim, category) {
                         resultList.audio = "True";
                     }
 
-                    if (!resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_url"] &&
+                    if (!resultList["unwrap_" + typeMap[resultList.multi_items[i].type] + "_url"] &&
                         resultList.multi_items[i].url) {
-                        resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_url"] = resultList.multi_items[i].url;
+                        resultList["unwrap_" + typeMap[resultList.multi_items[i].type] + "_url"] = resultList.multi_items[i].url;
                     }
-                    if (!resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_desc"] &&
+                    if (!resultList["unwrap_" + typeMap[resultList.multi_items[i].type] + "_desc"] &&
                         resultList.multi_items[i].desc) {
-                        resultList["custom_" + typeMap[resultList.multi_items[i].type] + "_desc"] = resultList.multi_items[i].desc;
+                        resultList["unwrap_" + typeMap[resultList.multi_items[i].type] + "_desc"] = resultList.multi_items[i].desc;
                     }
 
                     if (resultList.multi_items[i].thumbnail === "Y") {
-                        resultList.custom_img_url = resultList.multi_items[i].url;
-                        resultList.custom_img_desc = resultList.multi_items[i].desc;
+                        resultList.unwrap_img_url = resultList.multi_items[i].url;
+                        resultList.unwrap_img_desc = resultList.multi_items[i].desc;
                     }
                 }
             }
@@ -74,9 +74,9 @@ function appendArticleOrderListObject(isMore, slim, category) {
             var template = photoArticleTemplate();
             for (var y = 0; y < resultList.length; y++) {
                 var tempList = resultList[y];
-                tempList.custom_category = tempList.categories;
-                tempList.custom_date = makeDate(tempList.service_date);
-                tempList.custom_reporter = tempList.reporters[0] ? tempList.reporters[0].name : "";
+                tempList.unwrap_category = tempList.categories;
+                tempList.unwrap_date = makeDate(tempList.service_date);
+                tempList.unwrap_reporter = tempList.reporters[0] ? tempList.reporters[0].name : "";
 
                 addCustom(tempList);
                 result += Mustache.to_html(template, tempList);
@@ -174,7 +174,7 @@ var photoArticleTemplate = function(isOrder) {
         '{{#audio}}<span class="admin-type-voice">{{{list_title}}}</span>{{/audio}}{{^audio}}<span>{{{list_title}}}</span>{{/audio}}' +
         '</h1>' +
         '<p class="admin-mid-article-content2 {{^cms_thumbnail_img}}long{{/cms_thumbnail_img}}">{{{summary}}}</p>' +
-        '<p class="admin-article-date">{{custom_date}}{{#custom_reporter}}, {{custom_reporter}}{{/custom_reporter}}</p>' +
+        '<p class="admin-article-date">{{unwrap_date}}{{#unwrap_reporter}}, {{unwrap_reporter}}{{/unwrap_reporter}}</p>' +
         '<input type="hidden" id="hidCmssUrl" value="{{{' + cmss_url + '}}}"><input type="hidden" id="hidUseYn" value="{{{use_yn}}}"></div>' +
         '<a href="#" class="btn btn-sm mr-5 plDetail" onclick="fncOpenArticleDetailPop(\'{{{' + cmss_url + '}}}\')">상세보기</a>' +
         '</a>' +
