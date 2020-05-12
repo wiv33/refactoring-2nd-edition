@@ -4,7 +4,8 @@
     "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "mocha": "^7.1.1",
-    "svelte": "^3.22.2"
+    "svelte": "^3.22.2",
+    "lodash": "^4.17.15"
   },
   "scripts": {
     "start": "babel-node ./test/_000_test.js"

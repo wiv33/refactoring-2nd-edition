@@ -1,3 +1,8 @@
+const mocha = require("mocha");
+const describe = mocha.describe;
+const it = mocha.it;
+const _ = require("lodash");
+
 describe("212p", () => {
     function enrichReading(original) {
         const result = _.cloneDeep(original);
