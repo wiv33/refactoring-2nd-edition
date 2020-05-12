@@ -16,6 +16,6 @@ describe("## unescape test #", () => {
         assert.notStrictEqual(actual, target, "my body");
     })
     it("single quote", () => {
-        assert.ok(expect === actual, "parse OK")
+        assert.strictEqual(actual, expect, "is equal")
     })
 })
