@@ -1,12 +1,21 @@
 const assert = require("assert");
-const describe = require("mocha").describe;
-const it = require("mocha").it
+const mocha = require("mocha");
+const describe = mocha.describe;
+const it = mocha.it
 
-describe("## unescape test", () => {
+describe("## unescape test #", () => {
+    const target = "Korea&apos;s top culture stories of 2019: A look back at why galbi-flavored fried chicken, Bong Joon-ho and, of course, BTS&apos; dominated the headlines this year";
+    const expect = "Korea's top culture stories of 2019: A look back at why galbi-flavored fried chicken, Bong Joon-ho and, of course, BTS' dominated the headlines this year";
+
+    let actual
+
+    mocha.before(() => {
+        actual = target.replace(/&apos;/gi, "'");
+    })
+    it("not equal target and expect", () => {
+        assert.notStrictEqual(actual === target, "my body");
+    })
     it("single quote", () => {
-        const target = "Korea&apos;s top culture stories of 2019: A look back at why galbi-flavored fried chicken, Bong Joon-ho and, of course, BTS&apos; dominated the headlines this year";
-        const expectStr = target.replace(/&apos;/gi, "'");
-
-        assert.ok(expectStr === "Korea's top culture stories of 2019: A look back at why galbi-flavored fried chicken, Bong Joon-ho and, of course, BTS' dominated the headlines this year", "parse OK")
+        assert.ok(expect === actual, "parse OK")
     })
 })
