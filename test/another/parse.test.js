@@ -1,5 +1,6 @@
 const assert = require("assert");
-const exp = require("chai").expect
+const describe = require("mocha").describe;
+const it = require("mocha").it
 
 describe("## unescape test", () => {
     it("single quote", () => {
