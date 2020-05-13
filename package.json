@@ -9,7 +9,7 @@
     "axios": "^0.19.2"
   },
   "scripts": {
-    "start": "babel-node ./test/_000_test.js"
+    "start": "babel-node test/youtube_get_thumb/extractKey"
   },
   "babel": {
     "presets": [
