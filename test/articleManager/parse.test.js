@@ -32,11 +32,10 @@ describe("## unescape test #", () => {
         });
 
         it('test axios', function (done) {
-            console.log(1);
             const searchParam = {
                 startCount: 0,
                 startDate: "2020.01.12",
-                endDate: "2020.05.12",
+                endDate: "2020.05.01",
                 sort: "asc"
             }
             axios.get("http://localhost:8060/article/management.do", {
