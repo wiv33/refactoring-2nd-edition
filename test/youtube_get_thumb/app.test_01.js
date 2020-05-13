@@ -1,3 +1,5 @@
+import extractKey from "./extractKey";
+
 const assert = require("assert");
 const mocha = require("mocha");
 const describe = mocha.describe;
@@ -17,7 +19,9 @@ describe('# 유튜브 id 추출', () => {
     })
 
     it('parameter 있을 때', () => {
-        expectedKey = uri.replace("{{key}}", uri.substr(uri.lastIndexOf("/") + 1, uri.lastIndexOf("/") + 12));
+        expectedKey = uri.replace("{{key}}", extractKey(uri));
         assert.strictEqual(youtubeKey, expectedKey, "actual key equal extract key")
     })
+
 })
+
