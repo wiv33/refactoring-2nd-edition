@@ -1,10 +1,10 @@
-import extractKey from "./extractKey";
-
 const assert = require("assert");
 const mocha = require("mocha");
 const describe = mocha.describe;
 const it = mocha.it;
 const before = mocha.before;
+
+const extractKey = require("./extractKey");
 
 describe('# 유튜브 id 추출', () => {
     let thumbBase = "https://img.youtube.com/vi/{{key}}/hqdefault.jpg"
