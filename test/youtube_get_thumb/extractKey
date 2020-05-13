@@ -1,3 +1,3 @@
-export default function (uri) {
+module.exports = function (uri) {
     return uri.substr(uri.lastIndexOf("/") + 1, uri.lastIndexOf("/") + 12)
 }
