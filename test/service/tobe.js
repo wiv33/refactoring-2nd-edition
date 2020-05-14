@@ -34,14 +34,15 @@ function closedPopup() {
 }
 
 $("footer").append(
-    popDiv({link: "/etc/sample", img: "https://koreajoongangdaily.joins.com/data/popup/2020/05/06/samplePop.jpg"})
+    popDiv({link: "/etc/sample", img: "https://koreajoongangdaily.joins.com/data/popup/2020/05/06/samplePop.jpg", layerKinds: 'mainPopup'})
 );
 
 (function () {
     var winPop = window.open('about:blank', 'another article', 'width=400,height=400');
     winPop.document.write(popDiv({
         link: 'https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html',
-        img: 'https://koreajoongangdaily.joins.com/data/popup/2020/05/14/image.png'
+        img: 'https://koreajoongangdaily.joins.com/data/popup/2020/05/14/image.png',
+        layerKinds: 'mainWindowPopup'
     }));
 })();
 

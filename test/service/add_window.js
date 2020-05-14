@@ -27,7 +27,7 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
+            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>';
@@ -46,7 +46,7 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
+            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>';
@@ -66,7 +66,7 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
+            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>'
@@ -86,7 +86,7 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
+            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>';
