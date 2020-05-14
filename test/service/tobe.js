@@ -21,11 +21,11 @@ let popDiv =
 
 let win
 const ClosedPopup = {
-    mainPopup: function (param) {
+    mainPopup: (param) => {
         $("#mainPopup").hide();
         this.day(param);
     },
-    mainWindowPopup: function (param) {
+    mainWindowPopup: (param) => {
         this.day(param);
         win.close();
     },
