@@ -42,8 +42,8 @@ $("footer").append(
 );
 
 (function () {
-    var winPop = window.open('about:blank', 'another article', 'width=400,height=400');
-    winPop.document.write(popDiv({
+    var {document} = window.open('about:blank', 'another article', 'width=400,height=400');
+    document.write(popDiv({
         link: 'https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html',
         img: 'https://koreajoongangdaily.joins.com/data/popup/2020/05/14/popup_200514.jpg',
         layerKinds: 'mainWindowPopup'
