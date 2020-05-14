@@ -15,7 +15,7 @@ $("footer").append(
     '        </div>\n' +
     '        <div class="button-wrap">\n' +
     '            <button type="button" onclick="closedPopup()" data-event="day">오늘 하루 보지 않기</button>\n' +
-    '            <button type="button" onclick="closedPopup()" data-event="current">닫기</button>\n' +
+    '            <button type="button" onclick="closedPopup()" data-event="now">닫기</button>\n' +
     '        </div>\n' +
     '    </div>\n' +
     '</div>');
