@@ -12,8 +12,8 @@ let popDiv =
             '            </div>\n' +
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
-            '            <button type="button" onclick="closedPopup()" data-layerkinds="' + layerkinds + '">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="closedPopup()" data-layerkinds="' + layerkinds + '">닫기</button>\n' +
+            '            <button type="button" onclick="closedPopup(this)" data-layerkinds="' + layerkinds + '">오늘 하루 보지 않기</button>\n' +
+            '            <button type="button" onclick="closedPopup(this)" data-layerkinds="' + layerkinds + '">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>'
@@ -34,8 +34,8 @@ const ClosedPopup = {
     }
 }
 
-function closedPopup() {
-    ClosedPopup[this.dataset.layerkinds](this.dataset.until);
+function closedPopup(target) {
+    ClosedPopup[target.dataset.layerkinds](target);
 }
 
 $("footer").append(
