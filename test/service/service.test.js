@@ -17,12 +17,21 @@ describe('function parameterizing', () => {
 
     before('init strings', () => {
         asis_str = asis();
-        tobe_str = tobe({link: "/etc/sample", img: "https://koreajoongangdaily.joins.com/data/popup/2020/05/06/samplePop.jpg"})
     })
 
-    it( 'asis equal tobe' , () => {
-        assert.strictEqual(asis_str, tobe_str);
+    afterEach('remove settings', () => {
+        tobe_str = "";
+    })
+
+    it('asis equal tobe', () => {
+        tobe_str = tobe({
+            link: "/etc/sample",
+            img: "https://koreajoongangdaily.joins.com/data/popup/2020/05/06/samplePop.jpg"
+        })
+
+        assert.strictEqual(asis_str, tobe_str, "is Equal");
     })
 
 
+    it('')
 });
