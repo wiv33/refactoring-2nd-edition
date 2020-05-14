@@ -1,5 +1,5 @@
 let popDiv =
-    function ({link: link, img: img}) {
+    function ({link: link, img: img, layerKinds: layerKinds}) {
         return '<div class="layer-popup layer-main" id="mainPopup" style="display:none;">\n' +
             '    <div class="dimmed"></div>\n' +
             '    <div class="popup-wrap">\n' +
@@ -12,8 +12,8 @@ let popDiv =
             '            </div>\n' +
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
-            '            <button type="button" onclick="closedPopup()" data-event="day" data-kinds="">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="closedPopup()" data-event="now" data-kinds="">닫기</button>\n' +
+            '            <button type="button" onclick="closedPopup()" data-event="day" data-layerKinds="' + layerKinds + '">오늘 하루 보지 않기</button>\n' +
+            '            <button type="button" onclick="closedPopup()" data-event="now" data-layerKinds="' + layerKinds + '">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>'
@@ -25,12 +25,12 @@ const ClosedPopup = {
     },
     day: function (name) {
         this.now();
-        setCookie('mainPopup', 'Y', 1);
+        setCookie(name, 'Y', 1);
     }
 }
 
 function closedPopup() {
-    ClosedPopup[this.dataset.event](this.dataset.event);
+    ClosedPopup[this.dataset.event](this.dataset.layerKinds);
 }
 
 $("footer").append(
