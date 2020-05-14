@@ -3,7 +3,6 @@ const assert = common.assert;
 const mocha = common.mocha;
 const describe = common.describe;
 const it = common.it;
-const beforeEach = mocha.beforeEach;
 const before = mocha.before;
 
 const afterEach = mocha.afterEach;
