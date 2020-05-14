@@ -11,6 +11,7 @@ const afterEach = mocha.afterEach;
 const func = require("./add_window");
 const asis = func.asis;
 const tobe = func.tobe;
+const another = func.asis_another;
 
 describe('function parameterizing', () => {
     let asis_str, tobe_str;
@@ -33,5 +34,10 @@ describe('function parameterizing', () => {
     })
 
 
-    it('')
+    it('another not equals asis', () => {
+        const actual = another();
+        assert.notStrictEqual(actual, asis_str);
+    })
+
+
 });

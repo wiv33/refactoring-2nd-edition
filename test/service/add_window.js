@@ -32,6 +32,25 @@ module.exports = {
             '    </div>\n' +
             '</div>';
     },
+    asis_another() {
+        return '<div class="layer-popup layer-main" id="mainPopup" style="display:none;">\n' +
+            '    <div class="dimmed"></div>\n' +
+            '    <div class="popup-wrap">\n' +
+            '        <div class="thumb">\n' +
+            '            <div class="pc">\n' +
+            '                <a href="https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html"><img src="https://koreajoongangdaily.joins.com/data/popup/2020/05/14/image.png" alt=""></a>\n' +
+            '            </div>\n' +
+            '            <div class="mobile">\n' +
+            '                <a href="https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html"><img src="https://koreajoongangdaily.joins.com/data/popup/2020/05/14/image.png" alt=""></a>\n' +
+            '            </div>\n' +
+            '        </div>\n' +
+            '        <div class="button-wrap">\n' +
+            '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
+            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
+            '        </div>\n' +
+            '    </div>\n' +
+            '</div>';
+    },
 
     tobe({link: link, img: img}) {
         return '<div class="layer-popup layer-main" id="mainPopup" style="display:none;">\n' +
