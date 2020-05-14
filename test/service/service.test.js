@@ -48,4 +48,11 @@ describe('function parameterizing', () => {
         assert.strictEqual(actual, expect, 'another() equal tobe()');
     })
 
+
+    it('modified click event listener', () => {
+        const actual = tobe({
+            link: 'https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html',
+            img: 'https://koreajoongangdaily.joins.com/data/popup/2020/05/14/image.png',
+        });
+    })
 });

@@ -27,7 +27,7 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
+            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>';
@@ -46,7 +46,7 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
+            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>';
@@ -66,9 +66,29 @@ module.exports = {
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
             '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
+            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>'
+    },
+
+    add_func({link: link, img: img, close: close}) {
+        return '<div class="layer-popup layer-main" id="mainPopup" style="display:none;">\n' +
+            '    <div class="dimmed"></div>\n' +
+            '    <div class="popup-wrap">\n' +
+            '        <div class="thumb">\n' +
+            '            <div class="pc">\n' +
+            '                <a href="' + link + '"><img src="' + img + '" alt=""></a>\n' +
+            '            </div>\n' +
+            '            <div class="mobile">\n' +
+            '                <a href="' + link + '"><img src="' + img + '" alt=""></a>\n' +
+            '            </div>\n' +
+            '        </div>\n' +
+            '        <div class="button-wrap">\n' +
+            '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
+            '            <button type="button" onclick="nowClose()">닫기</button>\n' +
+            '        </div>\n' +
+            '    </div>\n' +
+            '</div>';
     }
-}
+};
