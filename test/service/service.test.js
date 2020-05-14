@@ -39,5 +39,14 @@ describe('function parameterizing', () => {
         assert.notStrictEqual(actual, asis_str);
     })
 
+    it('another equal tobe_func', () => {
+        const expect = another();
+        const actual = tobe({
+            link: 'https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html',
+            img: 'https://koreajoongangdaily.joins.com/data/popup/2020/05/14/image.png'
+        });
+
+        assert.strictEqual(actual, expect, 'another() equal tobe()');
+    })
 
 });
