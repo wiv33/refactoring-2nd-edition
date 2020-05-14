@@ -12,25 +12,33 @@ let popDiv =
             '            </div>\n' +
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
-            '            <button type="button" onclick="closedPopup()" data-event="day" data-layerKinds="' + layerKinds + '">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="closedPopup()" data-event="now" data-layerKinds="' + layerKinds + '">닫기</button>\n' +
+            '            <button type="button" onclick="closedPopup()" data-until="day" data-layerKinds="' + layerKinds + '">오늘 하루 보지 않기</button>\n' +
+            '            <button type="button" onclick="closedPopup()" data-until="now" data-layerKinds="' + layerKinds + '">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>'
     }
 
+let win
 const ClosedPopup = {
-    now: function () {
+    mainPopup: function (param) {
         $("#mainPopup").hide();
+        this[param.until](param);
+    },
+    mainWindowPopup: function (param) {
+        this[param.until](param);
+        win.close();
+    },
+    now: function () {
+
     },
     day: function (name) {
-        this.now();
         setCookie(name, 'Y', 1);
     }
 }
 
 function closedPopup() {
-    ClosedPopup[this.dataset.event](this.dataset.layerKinds);
+    ClosedPopup[this.dataset.layerKinds](this.dataset.until);
 }
 
 $("footer").append(
@@ -42,8 +50,8 @@ $("footer").append(
 );
 
 (function () {
-    var {document} = window.open('about:blank', 'another article', 'width=400,height=400');
-    document.write(popDiv({
+    win = window.open('about:blank', 'another article', 'width=400,height=400');
+    win.document.write(popDiv({
         link: 'https://koreajoongangdaily.joins.com/2020/05/14/etc/offer-job-job-offer/20200514094600361.html',
         img: 'https://koreajoongangdaily.joins.com/data/popup/2020/05/14/popup_200514.jpg',
         layerKinds: 'mainWindowPopup'
