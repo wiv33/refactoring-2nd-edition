@@ -12,12 +12,26 @@ let popDiv =
             '            </div>\n' +
             '        </div>\n' +
             '        <div class="button-wrap">\n' +
-            '            <button type="button" onclick="dayClose()">오늘 하루 보지 않기</button>\n' +
-            '            <button type="button" onclick="popupClose()">닫기</button>\n' +
+            '            <button type="button" onclick="closedPopup()" data-event="day" data-kinds="">오늘 하루 보지 않기</button>\n' +
+            '            <button type="button" onclick="closedPopup()" data-event="now" data-kinds="">닫기</button>\n' +
             '        </div>\n' +
             '    </div>\n' +
             '</div>'
     }
+
+const ClosedPopup = {
+    now: function () {
+        $("#mainPopup").hide();
+    },
+    day: function (name) {
+        this.now();
+        setCookie('mainPopup', 'Y', 1);
+    }
+}
+
+function closedPopup() {
+    ClosedPopup[this.dataset.event](this.dataset.event);
+}
 
 $("footer").append(
     popDiv({link: "/etc/sample", img: "https://koreajoongangdaily.joins.com/data/popup/2020/05/06/samplePop.jpg"})
