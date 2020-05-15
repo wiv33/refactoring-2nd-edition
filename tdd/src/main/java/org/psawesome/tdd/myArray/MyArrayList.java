@@ -1,9 +1,6 @@
 package org.psawesome.tdd.myArray;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * package: org.psawesome.tdd.myArray
@@ -23,42 +20,13 @@ public class MyArrayList<T> implements List<T> {
     }
 
     @Override
-    public int size() {
-        return this.array.length;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
-
-    @Override
-    public boolean contains(Object o) {
-        return false;
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public <T1> T1[] toArray(T1[] a) {
-        return null;
-    }
-
-    @Override
     public boolean add(T element) {
+        // TODO: FILL THIS IN!
         if (size >= this.array.length) {
             @SuppressWarnings("unchecked")
-            T[] sizeUp = (T[]) new Object[this.array.length * 2];
-            System.arraycopy(this.array, 0, sizeUp, 0, sizeUp.length);
-            this.array = sizeUp;
+            T[] bigger = (T[]) new Object[this.array.length * 2];
+            System.arraycopy(array, 0, bigger, 0, this.array.length);
+            array = bigger;
         }
         this.array[size] = element;
         size++;
@@ -66,82 +34,198 @@ public class MyArrayList<T> implements List<T> {
     }
 
     @Override
-    public boolean remove(Object o) {
-        return false;
+    public void add(int index, T element) {
+        isOutOfBounds(index, index > size);
+        // add the element to get the resizing
+        add(element);
+
+        // shift the elements
+        shiftTheElements(index);
+        // put the new one in the right place
+        array[index] = element;
+    }
+
+    private void shiftTheElements(int index) {
+        if (size - 1 - index >= 0) System.arraycopy(array, index, array, index + 1, size - 1 - index);
+    }
+
+    private void isOutOfBounds(int index, boolean isOutMaxSize) {
+        if (index < 0 || isOutMaxSize) {
+            throw new IndexOutOfBoundsException();
+        }
     }
 
     @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
+    public boolean addAll(Collection<? extends T> collection) {
+        boolean flag = true;
+        for (T element : collection) {
+            flag &= add(element);
+        }
+        return flag;
     }
 
     @Override
-    public boolean addAll(Collection<? extends T> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(int index, Collection<? extends T> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        return false;
+    public boolean addAll(int index, Collection<? extends T> collection) {
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void clear() {
+        // note: this version does not actually null out the references
+        // in the array, so it might delay garbage collection.
+        size = 0;
+    }
 
+    @Override
+    public boolean contains(Object obj) {
+        return indexOf(obj) != -1;
+    }
+
+    @Override
+    public boolean containsAll(Collection<?> collection) {
+        for (Object element : collection) {
+            if (!contains(element)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public T get(int index) {
-        return null;
+        isOutOfBounds(index, index >= size);
+        return array[index];
     }
 
     @Override
-    public T set(int index, T element) {
-        return null;
+    public int indexOf(Object target) {
+        // TODO: FILL THIS IN!
+        for (int i = 0; i < this.size; i++) {
+            if (target == null && this.get(i) == null) return i;
+
+            if (Objects.nonNull(target) && target.equals(this.get(i))) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Checks whether an element of the array is the target.
+     * <p>
+     * Handles the special case that the target is null.
+     *
+     * @param target
+     * @param element
+     */
+    private boolean equals(Object target, Object element) {
+        if (target == null) {
+            return element == null;
+        } else {
+            return target.equals(element);
+        }
     }
 
     @Override
-    public void add(int index, T element) {
-
+    public boolean isEmpty() {
+        return size == 0;
     }
 
     @Override
-    public T remove(int index) {
-        return null;
+    public Iterator<T> iterator() {
+        // make a copy of the array
+        T[] copy = Arrays.copyOf(array, size);
+        // make a list and return an iterator
+        return Arrays.asList(copy).iterator();
     }
 
     @Override
-    public int indexOf(Object o) {
-        return 0;
-    }
-
-    @Override
-    public int lastIndexOf(Object o) {
-        return 0;
+    public int lastIndexOf(Object target) {
+        // see notes on indexOf
+        for (int i = size - 1; i >= 0; i--) {
+            if (equals(target, array[i])) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public ListIterator<T> listIterator() {
-        return null;
+        // make a copy of the array
+        T[] copy = Arrays.copyOf(array, size);
+        // make a list and return an iterator
+        return Arrays.asList(copy).listIterator();
     }
 
     @Override
     public ListIterator<T> listIterator(int index) {
+        // make a copy of the array
+        T[] copy = Arrays.copyOf(array, size);
+        // make a list and return an iterator
+        return Arrays.asList(copy).listIterator(index);
+    }
+
+    @Override
+    public boolean remove(Object obj) {
+        int index = indexOf(obj);
+        if (index == -1) {
+            return false;
+        }
+        remove(index);
+        return true;
+    }
+
+    @Override
+    public T remove(int index) {
+        // TODO: FILL THIS IN!
         return null;
     }
 
     @Override
+    public boolean removeAll(Collection<?> collection) {
+        boolean flag = true;
+        for (Object obj : collection) {
+            flag &= remove(obj);
+        }
+        return flag;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> collection) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public T set(int index, T element) {
+//        this.isOutOfBounds(index, index >= size);
+        // TODO set을 하면 인덱스 하나씩 미뤄서 배열을 생성한다.
+        Objects.checkIndex(index, size);
+        this.array[index] = element;
+        return this.array[index];
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
     public List<T> subList(int fromIndex, int toIndex) {
-        return null;
+        if (fromIndex < 0 || toIndex >= size || fromIndex > toIndex) {
+            throw new IndexOutOfBoundsException();
+        }
+        T[] copy = Arrays.copyOfRange(array, fromIndex, toIndex);
+        return Arrays.asList(copy);
+    }
+
+    @Override
+    public Object[] toArray() {
+        return Arrays.copyOf(array, size);
+    }
+
+    @Override
+    public <U> U[] toArray(U[] array) {
+        throw new UnsupportedOperationException();
     }
 }

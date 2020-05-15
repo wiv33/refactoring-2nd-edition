@@ -21,12 +21,12 @@ class MyArrayListTest {
 
     @BeforeEach
     void setUp() {
-        list = new ArrayList<Integer>();
+        list = new ArrayList<>();
         list.add(1);
         list.add(2);
         list.add(3);
 
-        mylist = new MyArrayList<Integer>();
+        mylist = new MyArrayList<>();
         mylist.addAll(list);
     }
 
@@ -63,15 +63,9 @@ class MyArrayListTest {
         assertEquals(mylist.get(1), Integer.valueOf(5));
         assertEquals(mylist.size(), 4);
 
-        try {
-            mylist.set(-1, 0);
-            fail();
-        } catch (IndexOutOfBoundsException e) {} // good
+        assertThrows(IndexOutOfBoundsException.class, () -> mylist.set(-1, 0), "index Out of bounds exception");
 
-        try {
-            mylist.set(4, 0);
-            fail();
-        } catch (IndexOutOfBoundsException e) {} // good
+        assertThrows(IndexOutOfBoundsException.class, () -> mylist.set(4, 0), "Index out of bounds exception");
 
         mylist.add(0, 6);
         //System.out.println(Arrays.toString(mal.toArray()));
@@ -256,12 +250,14 @@ class MyArrayListTest {
         try {
             mylist.set(-1, 0);
             fail();
-        } catch (IndexOutOfBoundsException e) {} // good
+        } catch (IndexOutOfBoundsException e) {
+        } // good
 
         try {
             mylist.set(4, 0);
             fail();
-        } catch (IndexOutOfBoundsException e) {} // good
+        } catch (IndexOutOfBoundsException e) {
+        } // good
     }
 
     /**
@@ -288,7 +284,7 @@ class MyArrayListTest {
     @Test
     public void testToArray() {
         Object[] array = mylist.toArray();
-        assertEquals((Integer)array[0], (Integer.valueOf(1)));
+        assertEquals((Integer) array[0], (Integer.valueOf(1)));
     }
 
 }
