@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'org.psawesome'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.4.2'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+}
+
+test {
+    useJUnitPlatform()
+}
