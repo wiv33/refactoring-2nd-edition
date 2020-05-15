@@ -3,6 +3,7 @@
 .idea
 *private*
 node_modules
+build
 .gradle
 */gradlew
 */gradlew.bat
