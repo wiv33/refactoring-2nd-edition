@@ -289,7 +289,6 @@ class MyArrayListTest {
         assertEquals((Integer) array[0], (Integer.valueOf(1)));
     }
 
-    @Test
     void testArrayRemove() {
         int second = LocalDateTime.now().getSecond();
         mylist = new MyArrayList<>();

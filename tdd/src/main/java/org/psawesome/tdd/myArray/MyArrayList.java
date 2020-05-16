@@ -101,11 +101,12 @@ public class MyArrayList<T> implements List<T> {
     public int indexOf(Object target) {
         // TODO: FILL THIS IN!
         for (int i = 0; i < this.size; i++) {
-            if (target == null && this.get(i) == null) return i;
+            /*if (target == null && this.get(i) == null) return i;
 
             if (Objects.nonNull(target) && target.equals(this.get(i))) {
                 return i;
-            }
+            }*/
+            if (equals(target, array[i])) return i;
         }
         return -1;
     }
