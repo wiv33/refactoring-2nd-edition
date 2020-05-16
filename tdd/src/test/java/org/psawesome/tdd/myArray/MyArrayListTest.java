@@ -184,7 +184,7 @@ class MyArrayListTest {
     public void testRemoveObject() {
         boolean flag = mylist.remove(Integer.valueOf(2));
         assertEquals(flag, (true));
-        assertEquals(mylist.size(), (2));
+        assertEquals(2, mylist.size());
         assertEquals(mylist.get(1), (Integer.valueOf(3)));
         //System.out.println(Arrays.toString(mal.toArray()));
 

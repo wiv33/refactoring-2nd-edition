@@ -179,7 +179,14 @@ public class MyArrayList<T> implements List<T> {
     @Override
     public T remove(int index) {
         // TODO: FILL THIS IN!
-        return null;
+        T prev = this.array[index];
+        @SuppressWarnings("unchecked")
+        T[] newArr = (T[]) new Object[this.array.length];
+        System.arraycopy(this.array, 0, newArr, 0, size - 1);
+        System.arraycopy(this.array, index + 1, newArr, index, size);
+        this.array = newArr;
+        size -= 1;
+        return prev;
     }
 
     @Override
@@ -199,10 +206,10 @@ public class MyArrayList<T> implements List<T> {
     @Override
     public T set(int index, T element) {
 //        this.isOutOfBounds(index, index >= size);
-        // TODO set을 하면 인덱스 하나씩 미뤄서 배열을 생성한다.
         Objects.checkIndex(index, size);
+        T prev = this.array[index];
         this.array[index] = element;
-        return this.array[index];
+        return prev;
     }
 
     @Override
