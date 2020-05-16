@@ -179,13 +179,13 @@ public class MyArrayList<T> implements List<T> {
     @Override
     public T remove(int index) {
         // TODO: FILL THIS IN!
-        T prev = this.array[index];
+        T prev = this.get(index);
         @SuppressWarnings("unchecked")
         T[] newArr = (T[]) new Object[this.array.length];
         System.arraycopy(this.array, 0, newArr, 0, size - 1);
         System.arraycopy(this.array, index + 1, newArr, index, size);
         this.array = newArr;
-        size -= 1;
+        size--;
         return prev;
     }
 

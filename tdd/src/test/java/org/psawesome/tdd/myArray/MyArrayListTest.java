@@ -4,9 +4,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -285,6 +287,29 @@ class MyArrayListTest {
     public void testToArray() {
         Object[] array = mylist.toArray();
         assertEquals((Integer) array[0], (Integer.valueOf(1)));
+    }
+
+    @Test
+    void testArrayRemove() {
+        int second = LocalDateTime.now().getSecond();
+        mylist = new MyArrayList<>();
+        for (int i = 0; i < 50000; i++) {
+            this.mylist.add(i);
+        }
+        System.out.println("start time " + second + ", size = " + this.mylist.size());
+
+        int size = this.mylist.size();
+        for (int i = 0; i < size; i++) {
+            Integer remove = this.mylist.remove(i);
+            System.out.println("remove = " + remove);
+        }
+        int end = LocalDateTime.now().getSecond();
+        System.out.println("end time = " + (end - second));
+    }
+
+    @Test
+    void testArrayRemove2() {
+
     }
 
 }
