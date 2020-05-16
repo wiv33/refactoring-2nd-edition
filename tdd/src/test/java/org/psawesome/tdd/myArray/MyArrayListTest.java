@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * author: PS
  * DATE: 2020-05-14 목요일 20:57
  */
-class MyArrayListTest {
+public class MyArrayListTest {
     protected List<Integer> mylist;
     protected List<Integer> list;
 
