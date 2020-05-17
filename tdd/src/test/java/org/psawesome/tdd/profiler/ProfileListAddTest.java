@@ -21,23 +21,31 @@ class ProfileListAddTest {
     @Test
     void testProfileArrayListAdd() {
         ExecutorService es = Executors.newSingleThreadExecutor();
-        es.execute(new ProfileRunner("ArrayList add end", 4000, 1000,
-                new Profiler.Timeable() {
-                    List<String> list;
+        es.execute(() -> {
+            Profiler.Timeable timeable = new Profiler.Timeable() {
+                List<String> list;
 
-                    @Override
-                    public void setup(int n) {
-                        list = new ArrayList<>();
-                    }
+                @Override
+                public void setup(int n) {
+                    list = new ArrayList<>();
+                }
 
-                    @Override
-                    public void timeMe(int n) {
-                        for (int i = 0; i < n; i++) {
-                            list.add("a string _ ");
-                        }
+                @Override
+                public void timeMe(int n) {
+                    for (int i = 0; i < n; i++) {
+                        list.add("a string _ " + i);
                     }
-                })::runProfiler
-        );
+                }
+            };
+
+            String title = "ArrayList add end";
+            Profiler profiler = new Profiler(title, timeable);
+
+            int startN = 4000;
+            int endMillis = 1000;
+            XYSeries series = profiler.timingLoop(startN, endMillis);
+            profiler.plotResults(series);
+        });
 
         try {
             es.awaitTermination(1, TimeUnit.MINUTES);
@@ -49,22 +57,30 @@ class ProfileListAddTest {
     @Test
     void testProfileArrayListFirstAdd() {
         ExecutorService es = Executors.newSingleThreadExecutor();
-        es.execute(new ProfileRunner("ArrayList First add end", 4000, 10000,
-                new Profiler.Timeable() {
-                    List<String> list;
+        es.execute(() -> {
+            Profiler.Timeable timeable = new Profiler.Timeable() {
+                List<String> list;
 
-                    @Override
-                    public void setup(int n) {
-                        list = new ArrayList<>();
-                    }
+                @Override
+                public void setup(int n) {
+                    list = new ArrayList<>();
+                }
 
-                    @Override
-                    public void timeMe(int n) {
-                        for (int i = 0; i < n; i++) {
-                            list.add(0, "a string");
-                        }
+                @Override
+                public void timeMe(int n) {
+                    for (int i = 0; i < n; i++) {
+                        list.add(0, "a string");
                     }
-                })::runProfiler);
+                }
+            };
+            String title = "ArrayList First add end";
+            int startN = 4000,
+                    endMillis = 10000;
+            Profiler profiler = new Profiler(title, timeable);
+            XYSeries xySeries = profiler.timingLoop(startN, endMillis);
+            profiler.plotResults(xySeries);
+
+        });
 
         try {
             es.awaitTermination(10, TimeUnit.MINUTES);
@@ -77,22 +93,30 @@ class ProfileListAddTest {
     @Test
     void testProfileLinkedListAdd() {
         ExecutorService es = Executors.newSingleThreadExecutor();
-        es.execute(new ProfileRunner("MyLinkedList add end", 64000, 1000,
-                new Profiler.Timeable() {
-                    List<String> list;
+        es.execute(() -> {
+            Profiler.Timeable timeable = new Profiler.Timeable() {
+                List<String> list;
 
-                    @Override
-                    public void setup(int n) {
-                        list = new MyLinkedList<>();
-                    }
+                @Override
+                public void setup(int n) {
+                    list = new MyLinkedList<>();
+                }
 
-                    @Override
-                    public void timeMe(int n) {
-                        for (int i = 0; i < n; i++) {
-                            list.add("a string _ ");
-                        }
+                @Override
+                public void timeMe(int n) {
+                    for (int i = 0; i < n; i++) {
+                        list.add("a string _ ");
                     }
-                })::runProfiler);
+                }
+            };
+            String title = "MyLinkedList add end";
+            int startN = 64000;
+            int endMillis = 1000;
+
+            Profiler profiler = new Profiler(title, timeable);
+            XYSeries xySeries = profiler.timingLoop(startN, endMillis);
+            profiler.plotResults(xySeries);
+        });
 
         try {
             es.awaitTermination(1, TimeUnit.MINUTES);
@@ -104,22 +128,28 @@ class ProfileListAddTest {
     @Test
     void testProfileLinkedListFirstAdd() {
         ExecutorService es = Executors.newSingleThreadExecutor();
-        es.execute(new ProfileRunner("MyLinkedList add end", 4000, 10000,
-                new Profiler.Timeable() {
-                    List<String> list;
+        Profiler.Timeable timeable = new Profiler.Timeable() {
+            List<String> list;
 
-                    @Override
-                    public void setup(int n) {
-                        list = new MyLinkedList<>();
-                    }
+            @Override
+            public void setup(int n) {
+                list = new MyLinkedList<>();
+            }
 
-                    @Override
-                    public void timeMe(int n) {
-                        for (int i = 0; i < n; i++) {
-                            list.add(0, "a string _ ");
-                        }
-                    }
-                })::runProfiler);
+            @Override
+            public void timeMe(int n) {
+                for (int i = 0; i < n; i++) {
+                    list.add(0, "a string _ ");
+                }
+            }
+        };
+        String title = "MyLinkedList add end";
+        int startN = 4000;
+        int endMillis = 10000;
+
+        Profiler profiler = new Profiler(title, timeable);
+        XYSeries xySeries = profiler.timingLoop(startN, endMillis);
+        profiler.plotResults(xySeries);
 
         try {
             es.awaitTermination(1, TimeUnit.MINUTES);
@@ -128,17 +158,18 @@ class ProfileListAddTest {
         }
     }
 
-    @AllArgsConstructor
-    static class ProfileRunner {
-        private String title;
-        private int startN;
-        private int endMillis; // 실행시간이 임계치를 초과하면 중단한다.
-        private Profiler.Timeable timeable;
+}
 
-        public void runProfiler() {
-            Profiler profiler = new Profiler(this.title, this.timeable);
-            XYSeries xySeries = profiler.timingLoop(this.startN, this.endMillis);
-            profiler.plotResults(xySeries);
-        }
+@AllArgsConstructor
+class ProfileRunner {
+    private String title;
+    private int startN;
+    private int endMillis; // 실행시간이 임계치를 초과하면 중단한다.
+    private Profiler.Timeable timeable;
+
+    public void runProfiler() {
+        Profiler profiler = new Profiler(this.title, this.timeable);
+        XYSeries xySeries = profiler.timingLoop(this.startN, this.endMillis);
+        profiler.plotResults(xySeries);
     }
 }
