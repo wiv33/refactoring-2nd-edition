@@ -17,7 +17,7 @@ class WikiNodeExamTest {
 
     @Test
     void testSelectJSoup() {
-        Connection connect = Jsoup.connect("");
+        Connection connect = Jsoup.connect("https://google.com");
         Assertions.assertNotNull(connect);
     }
 }
