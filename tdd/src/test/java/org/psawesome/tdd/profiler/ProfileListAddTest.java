@@ -20,7 +20,7 @@ class ProfileListAddTest {
     void testProfileArrayListAdd() {
         ExecutorService es = Executors.newSingleThreadExecutor();
         es.execute(() -> {
-            Profiler.Timeable timeable = new Profiler.Timeable() {
+            Profiler.Timeable timetable = new Profiler.Timeable() {
                 List<String> list;
 
                 @Override
@@ -37,7 +37,7 @@ class ProfileListAddTest {
             };
 
             String title = "ArrayList add end";
-            Profiler profiler = new Profiler(title, timeable);
+            Profiler profiler = new Profiler(title, timetable);
 
             int startN = 4000;
             int endMillis = 1000;
