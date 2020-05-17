@@ -82,7 +82,10 @@ class WikiNodeExamTest {
             }
 
             // push the children onto the stack in reverse order
-            List<Node> nodes = new ArrayList<Node>(node.childNodes());
+            List<Node> nodes = new ArrayList<>(node.childNodes());
+
+//            List<Node> nodes = new LinkedList<>(node.childNodes());
+
             Collections.reverse(nodes);
 
             for (Node child : nodes) {
