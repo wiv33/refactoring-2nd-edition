@@ -12,12 +12,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * package: org.psawesome.tdd.treeCircuit
@@ -36,23 +30,8 @@ class WikiNodeExamTest {
     @Test
     void testConnectWiki() {
         String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
-
-        // download and parse the document
-        Connection conn = Jsoup.connect(url);
-        Document doc = null;
-        try {
-            doc = conn.get();
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException();
-        }
-
-        // select the content text and pull out the paragraphs.
-        Element content = doc.getElementById("mw-content-text");
-
-        // TODO: avoid selecting paragraphs from sidebars and boxouts
-        Elements paras = content.select(".mw-parser-output p");
-        Element firstPara = paras.get(1);
+        WikiFetcher wikiFetcher = new WikiFetcher();
+        Element firstPara = wikiFetcher.fetchWikipedia(url).get(1);
 
         recursiveDFS(firstPara);
         System.out.println("============");
