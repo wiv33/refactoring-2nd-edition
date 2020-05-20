@@ -9,8 +9,11 @@ module.exports = {
                 specialBulkSite: 11,
                 iflag: "R"
             },
-
-        }).then(res => console.log(res))
+            headers: {
+                Cookie: "MSESSIONID=PPoRT2dkmLJpWdx0cePDvKaztIB_FjjbBXWJfYHb.PRD-MGT"
+            }
+        })
+        .then(res => console.log(res))
         .finally(() => {
 
         });

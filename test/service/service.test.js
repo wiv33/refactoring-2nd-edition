@@ -7,10 +7,10 @@ const before = mocha.before;
 
 const afterEach = mocha.afterEach;
 
-const func = require("./add_window");
-const asis = func.asis;
-const tobe = func.tobe;
-const another = func.asis_another;
+const add_window = require("./add_window");
+const asis = add_window.asis;
+const tobe = add_window.tobe;
+const another = add_window.asis_another;
 
 describe('function parameterizing', () => {
     let asis_str, tobe_str;
