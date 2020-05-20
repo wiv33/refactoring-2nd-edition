@@ -22,7 +22,7 @@ describe(`JSON 내보내기`, () => {
         password: '1234'
     }
 
-    mocha.before(() => {
+    mocha.beforeEach(() => {
         const urls = ['aaa','bbb','ccc','ddd','eee','fff','ggg','hhh','iii','jjj','kkk']
         const subTitleListStr = ['qwer', 'asdf', 'zxcv', 'hgfd', 'trew', 'jtr', 'mry', 'rew']
         param = {
@@ -67,19 +67,21 @@ describe(`JSON 내보내기`, () => {
             headlineArticles: arr,
             feedbackEmail: `${email};${email}`
         }
-
-        axios.post("/article/newsstand/json.do", param, {
+        axios.post("http://localhost:8060/article/newsstand/json.do", param, {
             headers: {
-                "Cookie": `JSESSIONID=${sessionId}`
+                "Cookie": `JSESSIONID=B3ABD738AE9AE9A8092722384C12E9C7`
             },
-            withCredentials: true
+            responseType: "json",
         })
         .then(res => {
             console.log(res);
-            assert.strictEqual(expected.editorId, res.editorId)
-            assert.strictEqual(expected.template, res.template)
-            // assert.strictEqual(expected.headlineArticles, res.headlineArticles)
-            assert.strictEqual(expected.feedbackEmail, res.feedbackEmail)
+            const actual = res.data;
+            assert.ok(typeof actual == "object")
+
+            assert.strictEqual(expected.editorId, actual.editorId)
+            assert.strictEqual(expected.template, actual.template)
+            // assert.strictEqual(expected.headlineArticles, actual.headlineArticles)
+            assert.strictEqual(expected.feedbackEmail, actual.feedbackEmail)
             done();
         })
 
