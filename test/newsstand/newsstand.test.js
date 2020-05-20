@@ -57,31 +57,44 @@ describe(`JSON 내보내기`, () => {
     it(`거기서 원하는 json 생성`, function (done) {
         this.timeout(2000); // default
 
-        let arr = []
-        let ids = ['202020', '52352', '6344634', '734341', '467457', '26236523']
-        ids.forEach((v) => arr.push({nsid: v}))
+        let uniqueIds = []
+        let ids = ['202020', '52352', '6344634', '734341', '467457', '26236523', '4579237421']
+        ids.forEach((v) => uniqueIds.push({nsid: v}))
+        let isLive = false;
+        let editorId = "필성<psk@gmail.com>"
+        let template = "top-single"
+        let feedbackEmail = "psk@gmail.com;mybody@gmailcom" // max count 5
+
+        let param = {
+            editorId: editorId,
+            template: template,
+            uniqueIds: uniqueIds,
+            feedbackEmail: feedbackEmail
+        }
+
+        if (isLive) {
+            param.live = {
+                show: false, // defulat
+                position: "top" // top(default) or bottom
+            };
+        }
 
         expected = {
             editorId: `필성<${email}>`,
             template: 'top-single',
-            headlineArticles: arr,
+            headlineArticles: uniqueIds,
             feedbackEmail: `${email};${email}`
         }
         axios.post("http://localhost:8060/article/newsstand/json.do", param, {
             headers: {
-                "Cookie": `JSESSIONID=B3ABD738AE9AE9A8092722384C12E9C7`
+                "Cookie": `JSESSIONID=6D3A8F26F0E4A658B6381C4CA1A9A784`
             },
             responseType: "json",
         })
         .then(res => {
             console.log(res);
             const actual = res.data;
-            assert.ok(typeof actual == "object")
-
-            assert.strictEqual(expected.editorId, actual.editorId)
-            assert.strictEqual(expected.template, actual.template)
-            // assert.strictEqual(expected.headlineArticles, actual.headlineArticles)
-            assert.strictEqual(expected.feedbackEmail, actual.feedbackEmail)
+            assert.strictEqual("Success", actual);
             done();
         })
 
