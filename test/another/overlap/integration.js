@@ -28,6 +28,3 @@
 
 
  */
-const SearchContext = {
-
-}
