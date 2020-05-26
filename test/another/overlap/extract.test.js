@@ -3,17 +3,15 @@
         -> 이때 모든 row의 값을 비교한다.
  */
 
-const old = require("./result");
 const assert = require("assert");
+const expectData = require("./result");
+const appendFunc = require("./move_function");
 
 describe('함수 추출하기', function () {
-    let newData;
+    let actual
 
     it('should be equal data', function () {
-        for (let resDataKey in old) {
-            assert.strictEqual(old[resDataKey], newData[resDataKey]);
-        }
-        assert.deepStrictEqual(old["RESULT_LIST"], newData["RESULT_LIST"]);
+        assert.deepStrictEqual(appendFunc(expectData), actual);
     });
 
 });
