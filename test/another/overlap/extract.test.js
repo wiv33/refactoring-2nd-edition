@@ -5,14 +5,23 @@
 
 const assert = require("assert");
 const expectData = require("./result");
-const appendFunc = require("./move_function");
+const appendFunc = require("./existing_function");
+
 
 describe('함수 추출하기', function () {
-    let actual
+  let actual
 
-    it('should be equal data', function () {
-        assert.deepStrictEqual(appendFunc(expectData), actual);
+  describe('should be equal data', function () {
+    it('should be result match', function () {
+        const expect = appendFunc(expectData);
+        actual =
+        assert.deepStrictEqual(actual, expect);
     });
+
+      it('should be', function () {
+          assert.strictEqual()
+      });
+  });
 
 });
 
