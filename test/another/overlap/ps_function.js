@@ -155,13 +155,10 @@ module.exports = function (result) {
     return toHtml;
   }
 
-  /* inner function 시작*/
   /**
    * 목록 생성 함수
    * return html: string
    */
-
-  // 임의의 기사 템플릿 50개씩 추가 코드 삽입)
   return makeHtml(result);
 
 }
