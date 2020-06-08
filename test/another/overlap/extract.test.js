@@ -5,7 +5,10 @@
 
 const assert = require("assert");
 const expectData = require("./result");
+
 const appendFunc = require("./existing_function");
+const psAppender = require('./ps_function');
+
 const axios = require('axios');
 
 describe('함수 추출하기', function () {
@@ -22,7 +25,8 @@ describe('함수 추출하기', function () {
       })
       .then(res => {
         const expect = appendFunc(expectData);
-        actual = appendFunc(res.data);
+        actual = psAppender(res.data);
+
         assert.deepStrictEqual(actual, expect);
 
 
