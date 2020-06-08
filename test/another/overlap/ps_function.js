@@ -77,12 +77,17 @@ module.exports = function (result) {
     }
   };
 
-  function makeDate(date) {
-    return [
-      date.substring(0, 4),
-      date.substring(4, 6),
-      date.substring(6, 8)
-    ].join("-") + " " + date.substring(8, 10) + ":" + date.substring(10, 12);
+  const MakeDate = {
+    makeDate(date) {
+      return [
+        date.substring(0, 4),
+        date.substring(4, 6),
+        date.substring(6, 8)
+      ].join("-")
+    },
+    makeDateTime(date) {
+      return this.makeDate(date) + " " + date.substring(8, 10) + ":" + date.substring(10, 12);
+    }
   }
 
   /**
@@ -92,7 +97,6 @@ module.exports = function (result) {
    * data 속성을 추가하는 함수
    * */
   function unwrapFields(resultList) {
-
     if (resultList.multi_items.length > 0) {
       // resultList.unwrap_img_url = resultList.multi_items[0].url;
       // resultList.unwrap_img_desc = resultList.multi_items[0].desc;
@@ -131,7 +135,7 @@ module.exports = function (result) {
     for (var y = 0; y < resultList.length; y++) {
       var tempList = resultList[y];
       tempList.unwrap_category = tempList.categories;
-      tempList.unwrap_date = makeDate(tempList.service_date);
+      tempList.unwrap_date = MakeDate.makeDateTime(tempList.service_date);
       tempList.unwrap_reporter = tempList.reporters[0] ? tempList.reporters[0].name : "";
       unwrapFields(tempList);
 
@@ -159,7 +163,6 @@ module.exports = function (result) {
 
   // 임의의 기사 템플릿 50개씩 추가 코드 삽입)
   return makeHtml(result);
-
 
 }
 
