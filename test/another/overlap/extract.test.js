@@ -29,7 +29,6 @@ describe('함수 추출하기', function () {
 
         assert.deepStrictEqual(actual, expect);
 
-
         done();
 
       })

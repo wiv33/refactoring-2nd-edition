@@ -97,35 +97,35 @@ module.exports = function (result) {
    * data 속성을 추가하는 함수
    * */
   function unwrapFields(resultList) {
-    if (resultList.multi_items.length > 0) {
-      // resultList.unwrap_img_url = resultList.multi_items[0].url;
-      // resultList.unwrap_img_desc = resultList.multi_items[0].desc;
+    if (resultList.multi_items.length < 1) return;
 
-      for (var i = 0; i < resultList.multi_items.length; i++) {
+    // resultList.unwrap_img_url = resultList.multi_items[0].url;
+    // resultList.unwrap_img_desc = resultList.multi_items[0].desc;
 
-        var _multiType = TypeInfo._multi_items(resultList.multi_items[i].type, "type");
-        if (_multiType === "audio") {
-          resultList.audio = "True";
-        }
+    for (var i = 0; i < resultList.multi_items.length; i++) {
 
-        if (_multiType === "video") {
-          resultList.is_video = "True";
-        }
+      var _multiType = TypeInfo._multi_items(resultList.multi_items[i].type, "type");
+      if (_multiType === "audio") {
+        resultList.audio = "True";
+      }
 
-        if (!resultList["unwrap_" + _multiType + "_url"] &&
-          resultList.multi_items[i].url) {
-          resultList["unwrap_" + _multiType + "_url"] = resultList.multi_items[i].url;
-        }
-        if (!resultList["unwrap_" + _multiType + "_desc"] &&
-          resultList.multi_items[i].desc) {
-          resultList["unwrap_" + _multiType + "_desc"] = resultList.multi_items[i].desc;
-        }
+      if (_multiType === "video") {
+        resultList.is_video = "True";
+      }
 
-        // console.log(resultList.multi_items[i]);
-        if (resultList.multi_items[i].thumbnail === "Y") {
-          resultList.unwrap_img_url = resultList.multi_items[i].url;
-          resultList.unwrap_img_desc = resultList.multi_items[i].desc;
-        }
+      if (!resultList["unwrap_" + _multiType + "_url"] &&
+        resultList.multi_items[i].url) {
+        resultList["unwrap_" + _multiType + "_url"] = resultList.multi_items[i].url;
+      }
+      if (!resultList["unwrap_" + _multiType + "_desc"] &&
+        resultList.multi_items[i].desc) {
+        resultList["unwrap_" + _multiType + "_desc"] = resultList.multi_items[i].desc;
+      }
+
+      // console.log(resultList.multi_items[i]);
+      if (resultList.multi_items[i].thumbnail === "Y") {
+        resultList.unwrap_img_url = resultList.multi_items[i].url;
+        resultList.unwrap_img_desc = resultList.multi_items[i].desc;
       }
     }
   }
