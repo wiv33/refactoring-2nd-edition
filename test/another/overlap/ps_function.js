@@ -147,9 +147,9 @@ module.exports = function (result) {
   /**
    *   전체 HTML 생성
    * */
-  function makeHtml(result) {
+  function makeHtml(result, wrapper) {
     var toHtml = "";
-    toHtml += "<div class='image-scroll-wrapper'>";
+    toHtml += `<div class='${wrapper}'>`;
     toHtml += makeCustom(result.RESULT_LIST);
     toHtml += "</div>";
     return toHtml;
@@ -159,7 +159,7 @@ module.exports = function (result) {
    * 목록 생성 함수
    * return html: string
    */
-  return makeHtml(result);
+  return makeHtml(result, 'image-scroll-wrapper');
 
 }
 
