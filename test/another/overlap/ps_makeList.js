@@ -1,6 +1,6 @@
 const Mustache = require("./mustache.min");
-module.exports = function (result) {
-  var TypeInfo = {
+module.exports = function () {
+  this.typeInfo = {
     _component: function (type, key) {
       var result = {};
       switch (type) {
@@ -75,9 +75,8 @@ module.exports = function (result) {
       }
       return result[key];
     }
-  };
-
-  const MakeDate = {
+  }
+  this.Date = {
     makeDate(date) {
       return [
         date.substring(0, 4),
@@ -96,7 +95,7 @@ module.exports = function (result) {
    * unwrap_audio
    * data 속성을 추가하는 함수
    * */
-  function unwrapFields(resultList) {
+  this.unwrapFields = function (resultList) {
     if (resultList.multi_items.length < 1) return;
 
     // resultList.unwrap_img_url = resultList.multi_items[0].url;
@@ -104,7 +103,7 @@ module.exports = function (result) {
 
     for (var i = 0; i < resultList.multi_items.length; i++) {
 
-      var _multiType = TypeInfo._multi_items(resultList.multi_items[i].type, "type");
+      var _multiType = this.typeInfo._multi_items(resultList.multi_items[i].type, "type");
       if (_multiType === "audio") {
         resultList.audio = "True";
       }
@@ -130,14 +129,14 @@ module.exports = function (result) {
     }
   }
 
-  function makeCustom(resultList) {
+  this.makeCustom = function (resultList) {
     var result = "";
     for (var y = 0; y < resultList.length; y++) {
       var tempList = resultList[y];
       tempList.unwrap_category = tempList.categories;
-      tempList.unwrap_date = MakeDate.makeDateTime(tempList.service_date);
+      tempList.unwrap_date = this.Date.makeDateTime(tempList.service_date);
       tempList.unwrap_reporter = tempList.reporters[0] ? tempList.reporters[0].name : "";
-      unwrapFields(tempList);
+      this.unwrapFields(tempList);
 
       result += Mustache.to_html(photoArticleTemplate, tempList);
     }
@@ -147,10 +146,10 @@ module.exports = function (result) {
   /**
    *   전체 HTML 생성
    * */
-  function makeHtml(result, wrapper) {
+  this.makeHtml = function (result, wrapper) {
     var toHtml = "";
     toHtml += `<div class='${wrapper}'>`;
-    toHtml += makeCustom(result.RESULT_LIST);
+    toHtml += this.makeCustom(result.RESULT_LIST);
     toHtml += "</div>";
     return toHtml;
   }
@@ -159,7 +158,7 @@ module.exports = function (result) {
    * 목록 생성 함수
    * return html: string
    */
-  return makeHtml(result, 'image-scroll-wrapper');
+  // return makeHtml(result, 'image-scroll-wrapper');
 
 }
 
