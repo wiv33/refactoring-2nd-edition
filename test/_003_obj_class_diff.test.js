@@ -5,10 +5,12 @@ const beforeEach = mocha.beforeEach;
 const afterEach = mocha.afterEach;
 
 function Generate() {
-  return new Object({id: "ps", name: "awesome", init: function () {
+  return {
+    id: "ps", name: "awesome", init: function () {
       this.id = "ps";
       this.name = "awesome";
-    }});
+    }
+  };
 }
 
 describe('객체 확인', function () {
@@ -78,7 +80,7 @@ describe('객체 확인', function () {
     obj_2.name = "exception";
     assert.deepStrictEqual(obj_2.id, "nullPoint");
     assert.deepStrictEqual(obj_2.name, "exception");
-    
+
   });
 
   it('should be obj.init() have nothing to do with obj_2', function () {
@@ -86,7 +88,9 @@ describe('객체 확인', function () {
     obj_2.name = "keras"
 
     // init 재정의
-    obj.init = function() {this.id = "news";}
+    obj.init = function () {
+      this.id = "news";
+    }
 
     obj.init();
     assert.notStrictEqual(obj.id, "psk")
@@ -106,7 +110,9 @@ describe('객체 확인', function () {
     assert.deepStrictEqual(obj_2.name, "keras");
 
     // init 재정의
-    obj.init = function() {this.id = "news";}
+    obj.init = function () {
+      this.id = "news";
+    }
 
     obj.init();
     assert.notStrictEqual(obj.id, "psk")
