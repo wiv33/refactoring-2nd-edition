@@ -120,15 +120,15 @@ describe('class와 object({})의 차이와 {}의 새로운 객체 테스트', fu
       }
 
       obj.init();
-      assert.notStrictEqual(obj.id, "psk")
-      assert.strictEqual(obj.id, "news");
+      assert.notStrictEqual(obj.id, "ps") // default is ps
+      assert.strictEqual(obj.id, "news"); // after init() news
 
       obj_2.init();
-      assert.deepStrictEqual(obj.id, "news");
-      assert.deepStrictEqual(obj.name, "awesome");
+      assert.deepStrictEqual(obj.id, "news"); // after obj.init() is "news"
+      assert.deepStrictEqual(obj.name, "awesome"); // not update value is "awesome"
 
-      assert.deepStrictEqual(obj_2.id, "ps");
-      assert.deepStrictEqual(obj_2.name, "awesome");
+      assert.deepStrictEqual(obj_2.id, "ps"); // after obj2.init() is "ps" which default value
+      assert.deepStrictEqual(obj_2.name, "awesome");  // after obj2.init() is "awesome" which default value
 
     });
   });
