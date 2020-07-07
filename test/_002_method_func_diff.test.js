@@ -1,11 +1,11 @@
-function hi(callback, ee) {
-  callback(ee)
-  return callback
-}
-
-const hello = hi((dd) => console.log("hi " + dd), "ee")
-
 describe('method function difference', function () {
+  function hi(callback, ee) {
+    callback(ee)
+    return callback
+  }
+
+  const hello = hi((dd) => console.log("hi " + dd), "ee")
+
   it('console view', () => {
     hello("tt")
     //  log: 'hi ee'
