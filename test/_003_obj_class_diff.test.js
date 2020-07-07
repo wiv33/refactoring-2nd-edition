@@ -131,19 +131,22 @@ describe('class와 object({})의 차이와 {}의 새로운 객체 테스트', fu
       assert.deepStrictEqual(obj_2.name, "awesome");  // after obj2.init() is "awesome" which default value
 
     });
+
+    it('should obj unused new keyword have nothing to do with obj2', function () {
+      obj = Generate();
+      obj_2 = Generate();
+
+      obj.id = "bird"
+      obj.name = "new word";
+
+      assert.notStrictEqual(obj_2.id, "bird");
+      assert.notStrictEqual(obj_2.name, "new word");
+
+      assert.strictEqual(obj.id, "bird");
+      assert.strictEqual(obj.name, "new word");
+
+    });
   });
 
-  it('should obj unused new keyword have nothing to do with obj2', function () {
-    obj = Generate();
-    obj2 = Generate();
 
-    obj.id = "bird"
-    obj.name = "new word";
-
-    assert.notStrictEqual(obj2.id, "bird");
-    assert.notStrictEqual(obj2.name, "new word");
-
-    assert.strictEqual(obj.id, "bird");
-    assert.strictEqual(obj.name, "new word");
-  });
 });
