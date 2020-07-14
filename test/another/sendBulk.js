@@ -2,7 +2,7 @@ const api = require("axios");
 
 module.exports = {
     send(artMnfctSeq) {
-        api.get("/mgt/AGSVC0303UC.do", {
+        api.get("https://admin-jam.joins.net/mgt/AGSVC0303UC.do", {
             params: {
                 artMnfctSeq: artMnfctSeq,
                 siteCd: "JAD",
@@ -10,7 +10,7 @@ module.exports = {
                 iflag: "R"
             },
             headers: {
-                Cookie: "MSESSIONID=PPoRT2dkmLJpWdx0cePDvKaztIB_FjjbBXWJfYHb.PRD-MGT"
+                Cookie: "MSESSIONID=r8bYorOtjAeEZkkj__7zqNmcjQmfXhoclbb6oEZy.PRD-MGT"
             }
         })
         .then(res => console.log(res))
