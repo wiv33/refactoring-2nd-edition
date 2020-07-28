@@ -1,11 +1,12 @@
-const Timeline = {
-  name: "PS",
+const InitTestObj = {
+  name: "",
   body: "",
-  init() {
-    this.body = "created"
+  init({name: name, body: body}) {
+    this.name = name;
+    this.body = body
     return this;
   }
 }
 
-module.exports = Timeline;
+module.exports = InitTestObj;
 
