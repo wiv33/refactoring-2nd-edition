@@ -24,6 +24,7 @@ describe('testInit by chai', function () {
     // tag::should[]
     tl.name.should.be.a("string")
     tl.name.should.equal("PS")
+    // tl.name.should.equal("PS2")
 
     tl.body.should.equal("created");
     tl.body.should.not.equal("Created", `${tl.body + " is not 'Created'"}`);
