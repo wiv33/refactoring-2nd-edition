@@ -10,13 +10,15 @@ describe('testInit by chai', function () {
 
     // tag::expect()[]
     expect(tl).to.have.property("name")
+    expect(tl).to.have.property("body")
+    // expect(tl).to.have.property("body2")
     expect(tl.name).to.equal("PS")
     expect(tl.body).to.eq("created")
     // end::expect()[]
 
     // tag::assert[]
     assert.equal(tl.name, "PS", 'tl name is `PS`')
-    assert.equal(tl.body, "created", `${"tl body is 'created'"}`)
+    assert.equal(tl.body, "created", `${tl.body + " body is 'created'"}`)
     // end::assert[]
 
     // tag::should[]
@@ -24,9 +26,10 @@ describe('testInit by chai', function () {
     tl.name.should.equal("PS")
 
     tl.body.should.equal("created");
-    tl.body.should.not.equal("Created", `${"tl body is not 'Created'"}`);
+    tl.body.should.not.equal("Created", `${tl.body + " is not 'Created'"}`);
     // end::should[]
 
 
   });
+
 });
