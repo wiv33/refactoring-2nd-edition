@@ -2,10 +2,8 @@ module.exports = (obj) => {
   let result = {};
   obj.forEach(s =>
     s.component.forEach(d =>
-      d.particles.forEach(g => {
-        if (g.particleType === 'VodTemplate') {
-          result = g;
-        }
-      })))
+      result = d.particles.filter(s =>
+        s.particleType === 'VodTemplate')[0]
+    ))
   return result
 }
