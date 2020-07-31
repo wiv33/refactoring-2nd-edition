@@ -6,7 +6,7 @@ const it = common.it;
 const extract_lodash = require('./extract_by_lodash');
 const extract_plain = require("./extract_plain");
 
-describe('find obj', function () {
+describe('extract obj', function () {
   const dataJson = require('./data_json');
   const expected = require('./expected_json').data();
 
