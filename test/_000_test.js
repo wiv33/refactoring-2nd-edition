@@ -48,7 +48,6 @@ describe('assertion 테스트', () => {
     })
 })
 
-
 describe('우선순위 조작', function () {
     it('should be call', function () {
         for (let i = 0; i < 33; i++) {
