@@ -1,0 +1,1952 @@
+[
+  {
+    "componentId": 1,
+    "componentIndex": 0,
+    "componentType": "CoverTemplate",
+    "particles": [
+      {
+        "artMnfctSeq": 477691,
+        "particleId": 812912,
+        "particleIndex": 0,
+        "particleTypeCd": 205,
+        "coverType": "mobile",
+        "backgroundColor": "",
+        "imgUrl": "/resources/image_onln_path/2020/03/16/73d1d38f-3156-4c95-82b9-0d45d007269f.jpg",
+        "orgImgUseYn": true,
+        "wideImgYn": false
+      },
+      {
+        "artMnfctSeq": 477691,
+        "particleId": 812913,
+        "particleIndex": 1,
+        "particleTypeCd": 205,
+        "coverType": "pc",
+        "backgroundColor": "",
+        "imgUrl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "orgImgUseYn": true,
+        "wideImgYn": false
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 1,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "1",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 2,
+    "componentIndex": 2,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "2",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "정의당발(發) 롤 사태. 정의당 비례 1번 후보의 리그 오브 레전드(롤·LOL) 대리게임 논란이 뜨겁다. 정의당은 4·15 총선 비례대표 1번에 배정한 류호정(28) 후보가 다녔던 게임회사(스마일게이트)에 대리게임 관련 사실관계 확인 요청까지 검토 중이다. 도대체 게임을 남이 대신해 준 게 왜 이렇게 큰 문제가 된 걸까.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 152,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_all",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 3,
+    "componentIndex": 3,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "3",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 4,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 5,
+    "componentIndex": 5,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "5",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>무슨 일이야?</b>",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 6,
+    "componentIndex": 6,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 7,
+    "componentIndex": 7,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "6",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-류 후보는 2014년 자신의 롤 아이디로 다른 사람이 대신 게임을 하도록 해 게임 내 티어(tier·등급)를 올렸다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 8,
+    "componentIndex": 8,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "7",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-당시 논란이 되자 공식 사과문을 발표하고 이화여대 e스포츠 동아리 회장직도 물러났다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 9,
+    "componentIndex": 9,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "8",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-류 후보는 지난 6일 정의당 비례대표 1번에 배정됐다. 게임 BJ를 거쳐 게임회사 마케터를 했던 류 후보가 당선 안정권인 1번에 배정된 것. 그러자 게임 커뮤니티를 중심으로 과거 류 후보의 ‘대리게임’ 전적이 논란이 됐다.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 10,
+    "componentIndex": 10,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "9",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 11,
+    "componentIndex": 11,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "10",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 12,
+    "componentType": "ImgTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "812913",
+        "particleIndex": 0,
+        "particleType": "ImgTemplate",
+        "particleTypeCd": 205,
+        "option": "",
+        "title": "배경화면",
+        "artMnfctSeq": 477691,
+        "imgurl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "imgEditorUrl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "caption": "wide view",
+        "imgLink": "",
+        "imgLinkTarget": "_self",
+        "linkUseYn": false,
+        "imgClass": "photo_center",
+        "imgSize": "560px",
+        "orgImgSize": 1920,
+        "selected": "100",
+        "imgNid": 63400503,
+        "orgImgUseYn": false,
+        "wideImgYn": true,
+        "imgBigWide": false,
+        "imgScroll": false,
+        "imgThumbnail": false,
+        "imgWatermark": false,
+        "imgBulk": true
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 13,
+    "componentIndex": 13,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "12",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 14,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 15,
+    "componentIndex": 15,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "14",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>왜 대리게임을 해?</b>",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 16,
+    "componentIndex": 16,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 17,
+    "componentIndex": 17,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "15",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-롤에서 높은 티어를 받는 건 자신의 게임 실력을 나타내는 지표를 넘어, 자존심의 상징이다. 개인 유튜브 채널을 운영하는 게임BJ라면 높은 티어로 인기가 올라가면, 광고 수익도 올라간다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 18,
+    "componentIndex": 18,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "16",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-다른 사람의 아이디와 계정을 받아 대신 게임을 해주는 대리게임 업체도 있다.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 19,
+    "componentIndex": 19,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "17",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-롤 이용자 박동원씨는 “롤을 잘못하는 사람을 총칭할 때 하위그룹인 브론즈, 실버, 골드 앞글자를 따서 ‘브실골’이라 부른다”며 “ 농구·축구 잘하면 인기가 많은 것처럼 롤 티어가 높으면 부러움을 넘어 존경의 대상이 된다”고 말했다.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 20,
+    "componentIndex": 20,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "18",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 21,
+    "componentType": "ImgTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "812913",
+        "particleIndex": 0,
+        "particleType": "ImgTemplate",
+        "particleTypeCd": 205,
+        "option": "",
+        "title": "배경화면",
+        "artMnfctSeq": 477691,
+        "imgurl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "imgEditorUrl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "caption": "big wide",
+        "imgLink": "",
+        "imgLinkTarget": "_self",
+        "linkUseYn": false,
+        "imgClass": "photo_center",
+        "imgSize": "560px",
+        "orgImgSize": 1920,
+        "selected": "100",
+        "imgNid": 63400503,
+        "orgImgUseYn": false,
+        "wideImgYn": false,
+        "imgBigWide": true,
+        "imgScroll": false,
+        "imgThumbnail": false,
+        "imgWatermark": false,
+        "imgBulk": true
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 22,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 23,
+    "componentIndex": 23,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "21",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>그런데 롤이 뭐야?</b>  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 24,
+    "componentIndex": 24,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 25,
+    "componentIndex": 25,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "22",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-라이엇게임즈가 2011년 출시한 게임, 5 대 5로 팀을 짠 뒤 합심해 상대 넥서스(핵심 기지)를 파괴하는 걸 목표로 한다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 26,
+    "componentIndex": 26,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "23",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-농구가 선수별로 가드·포워드·센터 등 역할 구분하듯 롤도 각 챔피언(캐릭터) 특성에 따라 팀 전략을 짠다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 27,
+    "componentIndex": 27,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "24",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-랭크 게임(경쟁 모드)을 택하면 1년 단위로 시즌 진행. 시작할 땐 아이언 등급, 이후 배치고사(8번의 시범게임)를 통해 브론즈-실버-골드-플래티넘-다이아-마스터-그랜드마스터-챌린저 티어로 올라갈 수 있다. 많이 이길수록 높은 티어로 올라간다. 각 서버당 300명인 챌린저 티어는 프로 게이머 수준이다. 높은 티어 받으면 시즌 끝날 때 좋은 아이템도 받을 수 있다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 28,
+    "componentIndex": 28,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "25",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-롤의 월간 글로벌 사용자 수는 1억명 이상. 국내 PC방 게임 점유율 46.3%로 84주째 1위다(게임트릭스, 3월 11일 기준).  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 29,
+    "componentIndex": 29,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "26",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 30,
+    "componentType": "ImgTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "812913",
+        "particleIndex": 0,
+        "particleType": "ImgTemplate",
+        "particleTypeCd": 205,
+        "option": "",
+        "title": "배경화면",
+        "artMnfctSeq": 477691,
+        "imgurl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "imgEditorUrl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "caption": "고양이 스코롤 사진이 노출됩니다.  고양이 스코롤 사진이 노출됩니다.",
+        "imgLink": "",
+        "imgLinkTarget": "_self",
+        "linkUseYn": false,
+        "imgClass": "photo_center",
+        "imgSize": "560px",
+        "orgImgSize": 1920,
+        "selected": "100",
+        "imgNid": 63400503,
+        "orgImgUseYn": false,
+        "wideImgYn": false,
+        "imgBigWide": false,
+        "imgScroll": true,
+        "imgThumbnail": false,
+        "imgWatermark": false,
+        "imgBulk": true
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 31,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 32,
+    "componentIndex": 32,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "29",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>이게 왜 문제야?</b>",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 33,
+    "componentIndex": 33,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 34,
+    "componentIndex": 34,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "30",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-대리게임은 게임하는 재미를 떨어뜨리고, 대리게임이 성행하는 게임은 인기도 떨어진다. 게임사도 손해.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 35,
+    "componentIndex": 35,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "31",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-롤은 실력이 비슷한 인접 티어 이용자끼리만 게임을 매칭한다.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 36,
+    "componentIndex": 36,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "32",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-불공정한 경쟁으로 불만을 품은 이용자들이 게임을 그만두면 게임사도 손해를 입기에, 라이엇게임즈는 대리게임 의혹에 대해 신고를 받는다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 37,
+    "componentIndex": 37,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "33",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-신고가 누적되면 게임사가 조사를 벌이고, 문제가 있으면 30일 동안 계정 정지. 2차로 적발되면 영구 게임이용제한 조치를 취한다.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 38,
+    "componentIndex": 38,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "34",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 39,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 40,
+    "componentIndex": 40,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "36",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>대리게임이 불법이야? </b> ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 41,
+    "componentIndex": 41,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 42,
+    "componentIndex": 42,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "37",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-업계에선 대리게임 사이트 한 곳당 수익 규모를 월 1000만~2000만원으로 추정한다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 43,
+    "componentIndex": 43,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "38",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-대리게임 사례가 늘어나면서 e스포츠 시장이 혼탁해진다는 비판도 거세졌다.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 44,
+    "componentIndex": 44,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "39",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-2017년 이동섭 미래통합당 의원은 일명 '대리게임 처벌법'(게임산업법 개정안)을 발의했다. 돈을 받고 대리게임을 해줄 경우 2년 이하 징역 또는 2000만원 이하 벌금을 물리는 내용이다. 2018년 12월 공포됐다.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 45,
+    "componentIndex": 45,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "40",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 46,
+    "componentType": "ImgSlideTemplate",
+    "particles": [
+      {
+        "particleId": 812912,
+        "particleIndex": 0,
+        "particleType": "ImgSlideTemplate",
+        "option": "",
+        "artMnfctSeq": 477691,
+        "particleTypeCd": 205,
+        "imgurl": "/resources/image_onln_path/2020/03/16/73d1d38f-3156-4c95-82b9-0d45d007269f.jpg",
+        "imgNid": 63400502,
+        "imgBulk": true,
+        "caption": "배경화면",
+        "title": "배경화면",
+        "orgImgUseYn": true,
+        "wideImgYn": false
+      },
+      {
+        "particleId": 812913,
+        "particleIndex": 1,
+        "particleType": "ImgSlideTemplate",
+        "option": "",
+        "artMnfctSeq": 477691,
+        "particleTypeCd": 205,
+        "imgurl": "/resources/image_onln_path/2020/03/16/c885277c-3d9e-45c1-a3ca-9a11a61673b7.jpg",
+        "imgNid": 63400503,
+        "imgBulk": true,
+        "caption": "배경화면",
+        "title": "배경화면",
+        "orgImgUseYn": true,
+        "wideImgYn": false
+      },
+      {
+        "particleId": 812924,
+        "particleIndex": 2,
+        "particleType": "ImgSlideTemplate",
+        "option": "",
+        "artMnfctSeq": 477691,
+        "particleTypeCd": 205,
+        "imgurl": "/resources/image_onln_path/2020/03/16/974f3b5c-f1ab-466e-893a-57a99ca10725.jpg",
+        "imgNid": 63400504,
+        "imgBulk": true,
+        "caption": "테스트",
+        "title": "테스트",
+        "orgImgUseYn": true,
+        "wideImgYn": false
+      },
+      {
+        "particleId": 812925,
+        "particleIndex": 3,
+        "particleType": "ImgSlideTemplate",
+        "option": "",
+        "artMnfctSeq": 477691,
+        "particleTypeCd": 205,
+        "imgurl": "/resources/image_onln_path/2020/03/16/3611fdf2-b7a6-4b87-a01e-d1c91ec4ff37.jpg",
+        "imgNid": 63400505,
+        "imgBulk": true,
+        "caption": "테스트",
+        "title": "테스트",
+        "orgImgUseYn": true,
+        "wideImgYn": false
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 47,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 48,
+    "componentIndex": 48,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "43",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>그럼, 류호정 후보는?</b>",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 49,
+    "componentIndex": 49,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 50,
+    "componentIndex": 50,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "44",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-롤 이용자이자 '골드 티어'인 윤현석(법무법인 해자현) 변호사는 “류 후보의 해명이 맞다면 법이 생기기 전인 2014년의 일이고, 돈을 주고 티어를 올린 게 아니기 때문에 형사처벌 대상은 아니다”라고 말했다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 51,
+    "componentIndex": 51,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "45",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-류호정 후보는 지난 9일 중앙일보와의 인터뷰에서 “스포츠 정신에 위배되고 공정하지 못한 행위를 한 것에 대해 뼈저리게 반성하고 있다”며 다시 사과했다.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 52,
+    "componentIndex": 52,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "46",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 1,
+    "componentIndex": 53,
+    "componentType": "HorizonLineTemplate",
+    "particles": [],
+    "option": ""
+  },
+  {
+    "componentId": 54,
+    "componentIndex": 54,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "48",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "<b>앞으로는?</b>",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 150,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_start",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 55,
+    "componentIndex": 55,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "0",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 56,
+    "componentIndex": 56,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "49",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-류호정 후보가 정의당 비례대표 1번으로 21대 국회에 입성할 지에 이목이 집중된다. 정의당은 여야 양쪽에서 비난을 받고 있다.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 57,
+    "componentIndex": 57,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "50",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-프로게이머 출신인 황희두 민주당 공천관리위원은 “롤 대리게임 문제는 대리시험을 치다 걸린 것과 마찬가지”라며 “정의로운 사회를 추구하는 정의당에 비례 1번으로 대표해서 나올 수 있는 인물이라고 볼 수 있겠나”고 말했다.",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 58,
+    "componentIndex": 58,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "51",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-이동섭 미래통합당 의원은 “게임업계 노동자 권익에 앞장서겠다는 사람이 대리게임을 ‘조심성 없이 일어난 일’로 말해서는 안 된다”고 지적했다.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 59,
+    "componentIndex": 59,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "52",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-추가 의혹도 나왔다. 류 후보가 2015년 스마일게이트 입사 지원서에 자신의 롤 티어를 적었다는 사실이 알려졌다. '대리게임으로 취업에 이득을 본 것 아니냐'는 의혹이 제기됐다. 류 후보 측은 “대리게임으로 얻은 티어인 '다이아5'가 아닌 내 실력으로 만든 티어 '다이어4'를 기재했다”고 해명했다.  ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 60,
+    "componentIndex": 60,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "53",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "-정의당은 스마일게이트에 사실관계를 확인할 지 검토 중이다. 강민진 정의당 대변인은 “(보낸다면) 류 후보의 롤 티어가 입사에 영향을 미쳤는지, 류 후보의 주장과 회사의 주장에 차이가 있는지 물어보는 내용일 것”이라고 말했다.\n",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 151,
+        "textTemplate": "TextTemplate",
+        "textClass": "ab_paragraph_end",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 61,
+    "componentType": "HtmlTagTemplate",
+    "particles": [
+      {
+        "particleId": "812923",
+        "particleIndex": 0,
+        "particleType": "HtmlTagTemplate",
+        "particleTypeCd": 112,
+        "option": "",
+        "title": "테스트",
+        "artCont": "<iframe style='width:100%;height:500px' src='https://multimedia.scmp.com/widgets/china/wuhanvirus/#'></iframe>",
+        "particleTitle": "테스트"
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 61,
+    "componentIndex": 62,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "54",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 63,
+    "componentType": "RelationArticleTemplate",
+    "particles": [
+      {
+        "particleId": "812914",
+        "particleIndex": 0,
+        "particleType": "RelationArticleTemplate",
+        "particleTypeCd": 601,
+        "option": "",
+        "title": "",
+        "particleMemberSeq": 491,
+        "relationCnt": 8,
+        "relationTitle": "관련기사",
+        "relations": [
+          {
+          [
+            팩플
+          ]
+          게임
+          대신한
+          게
+          뭔
+          문제
+          ?
+          정의당발
+          류호정
+          '롤'
+          파문
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23729050",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+          ]
+          ″
+          코로나
+          팬데믹
+          ″
+          CNN은
+          부르고
+          WHO는
+          못
+          부르는
+          이유
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23727817",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+          ]
+          판
+          커진
+          '재난 기본소득'
+          …
+          기본소득
+          가는
+          발판될까
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23726196",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+          ]
+          네이버
+          ″
+          내
+          돈
+          내
+          가수한테
+          ″
+          …
+          음원시장
+          눈치게임
+          시작
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23725828",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+          ]
+          기사들은
+          우울한데
+          택시
+          사장들은
+          웃는다
+          ·
+          ·
+          ·
+          법은
+          왜
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23724118",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+          ]
+          플랫폼
+          택시
+          기여금
+          ?
+          택시에
+          그간
+          준
+          세금은
+          어쩌고
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23723501",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+          ]
+          에어비앤비
+          AI가
+          '당신의 위험 점수'
+          를
+          매기겠다면
+          ?
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23721034",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          },
+          {
+          [
+            팩플
+            단독
+          ]
+          카카오모빌리티,
+          자율주행
+          시동
+          건다
+          "dataConnectUrl"
+          :
+          "https://news.joins.com/article/23720022",
+          "dataConnectId"
+          :
+          "",
+          "dataUseCnt"
+          :
+          ""
+          }
+        ]
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 64,
+    "componentType": "HtmlTagTemplate",
+    "particles": [
+      {
+        "particleId": "812930",
+        "particleIndex": 0,
+        "particleType": "HtmlTagTemplate",
+        "particleTypeCd": 112,
+        "option": "",
+        "title": "VR테스트",
+        "artCont": "<iframe style='width:100%;height:500px' src='https://uploads.knightlab.com/scenevr/3546/678d5160/index.html'></iframe>",
+        "particleTitle": "VR테스트"
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 63,
+    "componentIndex": 65,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "56",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 64,
+    "componentIndex": 66,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "57",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 67,
+    "componentType": "HtmlTagTemplate",
+    "particles": [
+      {
+        "particleId": "812931",
+        "particleIndex": 0,
+        "particleType": "HtmlTagTemplate",
+        "particleTypeCd": 112,
+        "option": "",
+        "title": "스토리맵 테스트",
+        "artCont": "<iframe style='width:100%;height:500px' src='https://uploads.knightlab.com/storymapjs/1f0e6bb396a0fb046cb713ceddac49a4/seutorimaeb-teseuteu/draft.html'></iframe>",
+        "particleTitle": "스토리맵 테스트"
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 0,
+    "componentIndex": 68,
+    "componentType": "ImgTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "812939",
+        "particleIndex": 0,
+        "particleType": "ImgTemplate",
+        "particleTypeCd": 205,
+        "option": "",
+        "title": "테스트",
+        "artMnfctSeq": 477691,
+        "imgurl": "/resources/image_onln_path/2020/03/18/7434ba8e-8f64-40e2-9aa5-1694a9b856c8.jpg",
+        "imgEditorUrl": "/resources/image_editor_path/2020/03/18/9a22e74b-6b82-492f-8d52-68a1974c4fde.jpg",
+        "caption": "테스트",
+        "imgLink": "",
+        "imgLinkTarget": "_self",
+        "linkUseYn": false,
+        "imgClass": "photo_center",
+        "imgSize": "560px",
+        "orgImgSize": 560,
+        "selected": "100",
+        "imgNid": 63400558,
+        "orgImgUseYn": false,
+        "wideImgYn": false,
+        "imgBigWide": false,
+        "imgScroll": false,
+        "imgThumbnail": false,
+        "imgWatermark": false,
+        "imgBulk": true
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 65,
+    "componentIndex": 69,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "58",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": "박민제 기자 letmein@joongang.co.kr",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  },
+  {
+    "componentId": 66,
+    "componentIndex": 70,
+    "componentType": "TextTemplate",
+    "comclass": "",
+    "particles": [
+      {
+        "particleId": "59",
+        "particleIndex": 0,
+        "particleType": "TextTemplate",
+        "particleTypeCd": 104,
+        "option": "",
+        "artCont": " ",
+        "quoteYn": false,
+        "verticalYn": false,
+        "texttype": 104,
+        "textTemplate": "TextTemplate",
+        "textClass": "",
+        "question": "",
+        "ask": "",
+        "artHtml": "",
+        "checkOld": ""
+      }
+    ],
+    "option": ""
+  }
+]

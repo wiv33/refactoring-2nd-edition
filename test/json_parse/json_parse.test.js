@@ -12,14 +12,20 @@ describe('JSON.parse testing', function () {
     // console.info(JSON.stringify(text.my_string));
     const regExpMatchArray = JSON.stringify(text.my_string).match(/(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/gi);
     chai.assert.strictEqual(regExpMatchArray.length, 3);
-    let resText = text.my_string
+    // console.log(text.my_string)
     regExpMatchArray.forEach(s => {
-      // console.info(s.replace(/\\"|"/g, '__`'));
-      resText = resText.replace(s.replace(/\\"|"/g, '"'),
-        s.replace(/"/g, "`"))
-      console.info(resText)
+      // console.log(text.my_string.includes(s.replace(/\\"|"/g, "\"")));
+      const searchValue = s.replace(/\\"|"/g, "\"");
+      text.my_string = text.my_string.replace(searchValue, searchValue.replace(/"/g, "'"));
     });
+    const regExpMatchArray1 = text.my_string.match(/(?:"dataTitle":"*).*?(?:",)/gi);
+    regExpMatchArray1.forEach(s => {
+      const s1 = s.substr(13, s.length - 15);
+      text.my_string = text.my_string.replace(s1, s1.replace(/"/g, "″"))
+    })
 
-    console.info(JSON.parse(resText));
+    console.log(text.my_string);
+    console.log(JSON.parse(text.my_string));
+    chai.assert.strictEqual(typeof JSON.parse(text.my_string), "object")
   });
 });
