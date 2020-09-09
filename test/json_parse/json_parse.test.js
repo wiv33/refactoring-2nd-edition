@@ -32,4 +32,9 @@ describe('JSON.parse testing', function () {
   it('should parsing test', function () {
     JSON.parse(text.my_str_2.replace(/"/g, "'"));
   });
+
+  it('parsing by DOMparser', function () {
+    let parser = new DOMParser();
+
+  });
 });
