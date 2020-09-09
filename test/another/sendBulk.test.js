@@ -100,18 +100,19 @@ describe(`벌크 전송 테스트`, () => {
   it('should be send to FACTIVA, 9월 3일', function (done) {
     this.timeout(6000);
     let cnt = 51;
+    const specialBulkSite = 10
     const arr = Array.of(818145, 818144, 818143, 818141, 818139, 818138, 818134, 818131, 818129, 818113, 818110, 818100, 818086, 818081, 818068, 818051, 818043, 818020, 818008, 817987, 817977, 817973, 817967, 817960, 817919, 817916, 817856, 817842, 817841, 817772, 817759, 817754, 817738, 817730, 817727, 817713, 817702, 817697, 817680, 817654, 817651, 817635, 817614, 817576, 817566, 817563, 817548, 817326, 816972, 816891, 816800)
     assert.strictEqual(arr.length, cnt, 'is not equal size');
-    sendWrap(done, cnt, arr);
+    sendWrap(done, cnt, arr, specialBulkSite);
   });
 
 })
 
-function sendWrap(done, cnt, arr) {
+function sendWrap(done, cnt, arr, specialBulkSite) {
   let totCnt = cnt;
   arr.forEach(v => {
     totCnt--;
-    SendModule.send(v);
+    SendModule.send(v, specialBulkSite);
   });
   setTimeout(() => {
     assert.strictEqual(totCnt, 0, "is not zero.");

@@ -1,12 +1,12 @@
 const api = require("axios");
 
 module.exports = {
-    send(artMnfctSeq) {
+    send(artMnfctSeq, specialBulkSite) {
         api.get("https://admin-jam.joins.net/mgt/AGSVC0303UC.do", {
             params: {
                 artMnfctSeq: artMnfctSeq,
                 siteCd: "JAD",
-                specialBulkSite: 11,
+                specialBulkSite: specialBulkSite ? specialBulkSite : 11,
                 iflag: "R"
             },
             headers: {
