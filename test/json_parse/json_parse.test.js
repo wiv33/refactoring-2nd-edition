@@ -21,11 +21,15 @@ describe('JSON.parse testing', function () {
     const regExpMatchArray1 = text.my_string.match(/(?:"dataTitle":"*).*?(?:",)/gi);
     regExpMatchArray1.forEach(s => {
       const s1 = s.substr(13, s.length - 15);
-      text.my_string = text.my_string.replace(s1, s1.replace(/"/g, "″"))
+      text.my_string = text.my_string.replace(s1, s1.replace(/"/g, "&#34;"))
     })
 
     console.log(text.my_string);
     console.log(JSON.parse(text.my_string));
     chai.assert.strictEqual(typeof JSON.parse(text.my_string), "object")
+  });
+
+  it('should parsing test', function () {
+    JSON.parse(text.my_str_2.replace(/"/g, "'"));
   });
 });
