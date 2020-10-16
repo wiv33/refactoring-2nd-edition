@@ -8,7 +8,7 @@
 <body>
 <div id="map" style="width:100%;height:1500px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d82f2e2baca2c62e371692bcc84188f9"></script>
 <script>
 
   window.onload = function () {
@@ -128,7 +128,7 @@ setTimeout(() => {
     data.forEach(d => {
       let obj = {}
       obj['title'] = d['보안등위치명']
-      obj['latlng'] = new kakao.maps.LatLng(d['경도'], d['위도'])
+      obj['latlng'] = new kakao.maps.LatLng(d['위도'], d['경도'])
       positions.push(obj)
     })
 
