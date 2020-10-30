@@ -10,6 +10,8 @@ describe('# 유튜브 uri 조합', () => {
     let thumbBase = "https://img.youtube.com/vi/{{key}}/hqdefault.jpg"
 
     let uri
+    let watch
+
     let expected = `https://img.youtube.com/vi/k-senVR0q8M/hqdefault.jpg`
     let actual
 
@@ -18,6 +20,7 @@ describe('# 유튜브 uri 조합', () => {
 
     before(() => {
         uri = `https://www.youtube.com/embed/k-senVR0q8M?list=PL7FKPrjfmaNx4O5PzFuXm3RTAAgEyKjds?wmode=transparent`;
+        watch = `https://www.youtube.com/watch?v=G4tvbcevOH8&t=9s`
     })
 
     it('parameter 있을 때', () => {
@@ -30,5 +33,10 @@ describe('# 유튜브 uri 조합', () => {
         actual = thumbBase.replace("{{key}}", extractKey(uri));
         assert.strictEqual(actual, expected, "uri equal")
     })
+
+    it('should be extracted uri in watch', function () {
+        actualKey = extractKey(watch);
+        assert.strictEqual(actualKey, expected);
+    });
 })
 
