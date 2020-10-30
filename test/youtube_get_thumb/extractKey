@@ -1,3 +1,6 @@
 module.exports = function (uri) {
-    return uri.substr(uri.lastIndexOf("/") + 1, 11)
+    if (uri.match('watch?')) {
+        return uri.split("=")[1].split("&")[0]
+    }
+    return uri.substr(uri.lastIndexOf("/") + 1, 11);
 }
