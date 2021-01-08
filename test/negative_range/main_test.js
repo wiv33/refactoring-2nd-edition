@@ -10,29 +10,43 @@ describe('divide negative', function () {
     const divide = 4
     const max = 10
     const min = -2
-    const expected = [{min: -2, max: 1}, {min: 1, max: 4}, {min: 4, max: 7}, {min: 7, max: 10}]
 
-    class Calculation {
-        constructor(divide, min, max) {
+    class CalcRange {
+        constructor(divide, numA, numB) {
             this._divide = divide
-            this._min = min
-            this._max = max
+            this._numA = numA
+            this._numB = numB
         }
-        get min() {
-            return this._min
+        get numA() {
+            return this._numA
         }
-        get max() {
-            return this._max
+        get numB() {
+            return this._numB
         }
         get divide() {
             return this._divide
         }
-        calc() {
+
+        absMax() {
+            return Math.max(Math.abs(this.numA), Math.abs(this.numB));
+        }
+
+        absMin() {
+            return Math.min(Math.abs(this.numA), Math.abs(this.numB));
+        }
+
+        absSum() {
+            if (this.numA < 0 && this.numB < 0) {
+                return this.absMax() - this.absMin();
+            }
+            return Math.abs(this.numA) + Math.abs(this.numB);
+        }
+
+        response() {
             let result = []
-            const absSum = Math.abs(this.min) + Math.abs(this.max);
-            const step = Math.ceil(absSum / this.divide) //  4
-            let _from = this.max
-            let _to = this.min
+            const step = Math.round(this.absSum() / this.divide) //  4
+            let _from = Math.max(this.numB, this.numA)
+            let _to = Math.min(this.numA, this.numB)
             for (let i = 0; i < this.divide; i++) {
                 _from = _from - step
                 _to = _from + step
@@ -42,18 +56,34 @@ describe('divide negative', function () {
         }
     }
     it('-부터 +까지 정상적인 연산 테스트', function () {
-        chaiAssert.isArray(expected)
-        const calculation = new Calculation(divide, min, max);
+        const expected = [{min: -2, max: 1}, {min: 1, max: 4}, {min: 4, max: 7}, {min: 7, max: 10}]
+        const calculation = new CalcRange(divide, min, max);
 
-        chaiAssert.strictEqual(calculation.max, 10)
-        chaiAssert.strictEqual(calculation.min, -2)
+        chaiAssert.strictEqual(calculation.numB, 10)
+        chaiAssert.strictEqual(calculation.numA, -2)
         chaiAssert.strictEqual(calculation.divide, 4)
 
-        chaiAssert.deepEqual(expected, calculation.calc())
+        chaiAssert.deepEqual(expected, calculation.response())
     });
 
-    it('should ', function () {
-        
+    it('양수의 연산', function () {
+        const expected = [{min: 0, max: 250}, {min: 250, max: 500}, {min: 500, max: 750}, {min: 750, max: 1000}]
+        const calculation = new CalcRange(4, 0, 1000);
+        chaiAssert.deepEqual(expected, calculation.response())
     });
 
+    it('test change the min and max', function () {
+        const expected = [ { min: -300, max: 25 }, { min: 25, max: 350 }, { min: 350, max: 675 }, { min: 675, max: 1000 } ]
+        const cal = new CalcRange(4, 1000, -300);
+        chaiAssert.deepEqual(cal.response(), expected)
+    });
+
+    it('음수끼리의 range', function () {
+        const expected = [ { min: -2000, max: -1750 },
+            { min: -1750, max: -1500 },
+            { min: -1500, max: -1250 },
+            { min: -1250, max: -1000 } ]
+        const cal = new CalcRange(4, -2000, -1000);
+        chaiAssert.deepEqual(expected, cal.response())
+    });
 });
